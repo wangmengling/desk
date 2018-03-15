@@ -6,10 +6,13 @@
   "homepage": ".",
   "dependencies": {
     "electron": "^1.8.3",
+    "history": "^4.7.2",
     "inspect": "0.0.2",
     "nodemon": "^1.17.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
     "react-scripts": "1.1.1"
   },
   "devDependencies": {
