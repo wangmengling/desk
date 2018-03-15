@@ -7,13 +7,14 @@ import {
   hashRouter
 } from 'react-router-dom'
 import history from "./History";
+import DefaultLayout from "./components/layout/DefaultLayout";
 import App from './App';
 
 const Routes = () => (
     // <Router>
     <Router history={history}> 
       <div>
-        <Route exact path="/" component={App}/>
+        <DefaultLayout exact path="/" component={App}/>
       </div>
     </Router>
   )
