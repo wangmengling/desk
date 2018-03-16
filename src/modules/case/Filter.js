@@ -3,8 +3,10 @@ import React,{ Component } from "react";
 class Filter extends Component {
     render() {
         return (
-            <div>
-                
+            <div className="Filter">
+                <div className="Category">
+                    
+                </div>
             </div>
         )
     }

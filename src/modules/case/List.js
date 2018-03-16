@@ -1,6 +1,6 @@
 import React,{ Component } from "react";
 import Filter from "./Filter";
-
+import  "./List.css";
 
 class List extends Component {
     state = {
@@ -8,8 +8,8 @@ class List extends Component {
     }
     render() {
         return (
-            <div>
-                <div>
+            <div className="CaseList">
+                <div className="CaseFilter">
                     <Filter />
                 </div>
             </div>
