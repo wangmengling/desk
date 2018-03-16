@@ -6,6 +6,7 @@ import {
     Link
 } from 'react-router-dom'
 import history from "../../History";
+import "./DefaultLayout.css";
 
 
 const DefaultLayout = ({ component: Component, ...rest}) => {
@@ -21,13 +22,11 @@ const DefaultLayout = ({ component: Component, ...rest}) => {
             // UserStore.isLogin ? (
                 <div className="App">
                     <div className="AppHeader">
-                    <h1>City Gallery</h1>
+
                     </div>
 
                     <div className="AppNav">
-                    London<br />
-                    Paris<br />
-                    Tokyo<br />
+                        
                     </div>
 
                     <div className="AppContent">
@@ -35,7 +34,7 @@ const DefaultLayout = ({ component: Component, ...rest}) => {
                     </div>
 
                     <div className="AppFooter">
-                    Copyright W3School.com.cn
+                    {/* Copyright W3School.com.cn */}
                     </div>
                 </div>
                 // <div className='LayoutRoot'>

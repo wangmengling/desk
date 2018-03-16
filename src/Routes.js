@@ -9,12 +9,13 @@ import {
 import history from "./History";
 import DefaultLayout from "./components/layout/DefaultLayout";
 import App from './App';
+import { List } from "./modules/case";
 
 const Routes = () => (
     // <Router>
     <Router history={history}> 
       <div>
-        <DefaultLayout exact path="/" component={App}/>
+        <DefaultLayout exact path="/" component={List}/>
       </div>
     </Router>
   )

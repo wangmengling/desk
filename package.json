@@ -5,9 +5,12 @@
   "main": "main.js",
   "homepage": ".",
   "dependencies": {
+    "axios": "^0.18.0",
     "electron": "^1.8.3",
     "history": "^4.7.2",
     "inspect": "0.0.2",
+    "mobx": "^4.1.0",
+    "mobx-react": "^5.0.0",
     "nodemon": "^1.17.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
