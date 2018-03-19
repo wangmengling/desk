@@ -22,9 +22,10 @@ class Category extends Component {
         });
     }
     
-    selectAction(data,isSelect) {
+    selectAction(isSelect,selectIndex) {
         this.setState({
-            isSelect:isSelect
+            isSelect:isSelect,
+            selectIndex:selectIndex
         })
     }
 

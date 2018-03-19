@@ -15,7 +15,7 @@ class Button extends Component {
             isSelect: !this.state.isSelect 
         }, () => {
             if (this.props.onClick) {
-                this.props.onClick(this.props.value,this.state.isSelect);
+                this.props.onClick(this.state.isSelect,this.props.number);
             }
         });
     }
@@ -41,7 +41,8 @@ class Button extends Component {
 Button.propTypes = {
     isSelect: PropTypes.bool,
     value:PropTypes.string,
-    onClick:PropTypes.func
+    onClick:PropTypes.func,
+    number:PropTypes.number
 }
 
 export default Button;
