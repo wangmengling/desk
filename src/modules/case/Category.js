@@ -9,31 +9,30 @@ class Category extends Component {
         super(props);
         this.selectAction = this.selectAction.bind(this);
         this.state = { 
-            value:[] 
+            value:[],
+            selectIndex:0,
+            isSelect:false
         };
+        
     }
 
     componentWillMount() {
-        // clearInterval(this.interval);
         this.setState({
             value:this.props.values
         });
-        console.log(this.props.values);
     }
-
-
-      
     
-    
-    selectAction(data) {
-        
+    selectAction(data,isSelect) {
+        this.setState({
+            isSelect:isSelect
+        })
     }
 
     render() {
         return (
             <div className="CategoryList">
                 {this.state.value.map((item,i) => (
-                        <div key={i}>
+                        <div key={i} className="category">
                             <Button isSelect={true} onClick={this.selectAction} value={item}/>
                         </div>
                     ))

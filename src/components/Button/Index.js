@@ -11,13 +11,13 @@ class Button extends Component {
     }
 
     onClick() {
-        this.setState({ 
+        this.setState({
             isSelect: !this.state.isSelect 
+        }, () => {
+            if (this.props.onClick) {
+                this.props.onClick(this.props.value,this.state.isSelect);
+            }
         });
-        if (this.props.onClick) {
-            this.props.onClick(this.props.value);
-        }
-        
     }
     render() {
         let sonnetButton = "sonnetButton";
@@ -31,7 +31,6 @@ class Button extends Component {
         }
         let { value } = this.props;
         return (
-            
             <div className={sonnetButton} onClick={this.onClick}>
                 <font className={sonnetButtonText}>{value}</font>
             </div>
