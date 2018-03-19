@@ -1,9 +1,34 @@
+webkit, opera, IE9
+　　::selection { background:#ffffff; }
+　　/* mozilla firefox */
+　　::-moz-selection { background:lightblue; }
 .sonnetButton {
     height: 20px;
     border-radius: 10px;
     background-color: #f7f7f7;
+    padding-left: 22px;
+    padding-right: 22px;
+    cursor: pointer;
+}
+
+.sonnetButtonText {
+    color: #000000;
+    font-size: 13px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+.sonnetButtonSelect {
+    height: 20px;
+    border-radius: 10px;
+    background-color: #7ED321;
+    padding-left: 22px;
+    padding-right: 22px;
+    cursor: pointer;
     
 }
-.sonnetButtonText {
+
+.sonnetButtonTextSelect {
     color: #ffffff;
+    font-size: 13px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }

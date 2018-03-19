@@ -1,7 +1,7 @@
 import React from 'react'
 import {
-//   Router,
-  BrowserRouter as Router,
+  Router,
+  // BrowserRouter as Router,
   Route,
   Link,
   hashRouter

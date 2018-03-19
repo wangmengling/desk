@@ -1,0 +1,4 @@
+.CategoryList {
+    display: flex;
+    flex-direction: row;
+}
