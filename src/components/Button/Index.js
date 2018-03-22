@@ -6,8 +6,17 @@ class Button extends Component {
         super(props);
         this.onClick = this.onClick.bind(this);
         this.state = { 
-            isSelect: false 
+            isSelect: this.props.isSelect 
         };
+    }
+    
+    componentWillMount() {
+        // console.log(this.props.isSelect);
+        // this.setState({
+        //     isSelect:this.props.isSelect
+        // }, () =>  {
+        //     console.log(this.state.isSelect)
+        // })
     }
 
     onClick() {

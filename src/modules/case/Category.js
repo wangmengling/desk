@@ -23,19 +23,30 @@ class Category extends Component {
     }
     
     selectAction(isSelect,selectIndex) {
+        console.log(isSelect);
         this.setState({
+            selectIndex:selectIndex,
             isSelect:isSelect,
-            selectIndex:selectIndex
+        },()=>{
+            
         })
     }
 
     render() {
+        let isSelect = this.state.isSelect;
         return (
             <div className="CategoryList">
-                {this.state.value.map((item,i) => (
-                        <div key={i} className="category">
-                            <Button isSelect={true} onClick={this.selectAction} value={item}/>
-                        </div>
+               {this.state.value.map((item,i) => (
+                        (isSelect && i == this.state.selectIndex) ? (
+                            <div key={i} className="category">
+                                <Button isSelect={true} onClick={this.selectAction} value={item}  number={i}/>
+                            </div>
+                        ) : (
+                            <div key={i} className="category">
+                            <span></span>
+                                <Button  isSelect={false} onClick={this.selectAction} value={item}  number={i}/>
+                            </div>
+                        )
                     ))
                 }
             </div>

@@ -6,7 +6,7 @@ class Filter extends Component {
         return (
             <div className="Filter">
                 <div className="Category">
-                    <Category values={["sd","asdfasdf"]}/>
+                    <Category values={["sd","asdfasdf","sdsd"]}/>
                 </div>
             </div>
         )
