@@ -23,7 +23,6 @@ class Category extends Component {
     }
     
     selectAction(isSelect,selectIndex) {
-        console.log(isSelect);
         this.setState({
             selectIndex:selectIndex,
             isSelect:isSelect,
