@@ -45,7 +45,16 @@ class List extends Component {
                     useWindow={false}
                     className="CaseContent"
                 >
-                    <CaseBlock />
+                    <div className="CaseBlockList">
+                        <CaseBlock width="300" />
+                        <CaseBlock width="300" />
+                        <CaseBlock width="300" />
+                        <CaseBlock width="300" />
+                        <CaseBlock width="300" />
+                        <CaseBlock width="300" />
+                        <CaseBlock width="300" />
+                    </div>
+                    
                 </InfiniteScroll>
             </div>
         )
