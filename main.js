@@ -22,7 +22,7 @@ function createWindow () {
   //   slashes: true
   // }))
   if (true) {
-    mainWindow.loadURL('http://localhost:3000/')
+    mainWindow.loadURL('http://localhost:8080/')
   }else {
     mainWindow.loadURL(url.format({
       pathname: path.join(__dirname, './build/index.html'), protocol: 'file:', slashes: true }))

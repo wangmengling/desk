@@ -7,10 +7,10 @@ class Filter extends Component {
         return (
             <div className="Filter">
                 <div className="FilterCategory">
-                    <Category values={["中式婚礼","欧式婚礼","北京"]}/>
+                    <div className="FilterCategoryTitle">婚礼风格:</div> <div> <Category values={["中式婚礼","欧式婚礼","北京","北京","北京","北京","北京"]}/></div>
                 </div>
                 <div className="FilterCategory">
-                    <Category values={["中式婚礼","欧式婚礼","北京"]}/>
+                    <div className="FilterCategoryTitle">婚礼风格:</div> <div> <Category values={["中式婚礼","欧式婚礼","北京"]}/></div>
                 </div>
             </div>
         )

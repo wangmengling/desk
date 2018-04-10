@@ -4,7 +4,7 @@ webkit, opera, IE9
 　　::-moz-selection { background:lightblue; }
 .sonnetButton {
     height: 20px;
-    border-radius: 10px;
+    border-radius: 3px;
     background-color: #f7f7f7;
     padding-left: 22px;
     padding-right: 22px;
@@ -19,7 +19,7 @@ webkit, opera, IE9
 
 .sonnetButtonSelect {
     height: 20px;
-    border-radius: 10px;
+    border-radius: 3px;
     background-color: #7ED321;
     padding-left: 22px;
     padding-right: 22px;
