@@ -5,6 +5,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
     devtool: 'eval-source-map',
+        // target: 'electron-renderer',
         entry: __dirname + "/src/index.js", //已多次提及的唯一入口文件
         output: {
             path: __dirname + "/build",
@@ -56,6 +57,16 @@ module.exports = {
                 {test: /\.html$/,loader: 'raw-loader'},
             ]
     },
+    resolve: {
+        extensions: ['.js', '.jsx'], //后缀名自动补全
+    },
+    
+    node: {
+        console: false,
+        fs: 'empty',
+        net: 'empty',
+        tls: 'empty'
+    },
     plugins: [
         new webpack.BannerPlugin('版权所有，翻版必究'),
         new HtmlWebpackPlugin({
@@ -65,5 +76,6 @@ module.exports = {
         // new webpack.optimize.OccurrenceOrderPlugin(),
         // new webpack.optimize.UglifyJsPlugin(),
         // new ExtractTextPlugin("style.css")
-    ]
+    ],
+    // target: 'electron-renderer'
 }
