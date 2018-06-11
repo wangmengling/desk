@@ -1,6 +1,7 @@
 {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "presets": ["es2017",
         "react",
         "stage-3",
@@ -9,6 +10,9 @@
       ["import", { "libraryName": "antd", "style": "css" }], // `style: true` for less，
       "transform-decorators-legacy"
     ],
+=======
+    "presets": ["env","react","stage-2"],
+>>>>>>> parent of b05d8e5... webpack 修改
 =======
     "presets": ["env","react","stage-2"],
 >>>>>>> parent of b05d8e5... webpack 修改
