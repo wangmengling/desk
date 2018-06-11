@@ -21,14 +21,16 @@ Fetch.interceptors.request.use(
       config.method === "delete"
     ) {
       // 序列化
+      // config.url = config.url + qs.stringify(config.data)
       config.data = qs.stringify(config.data);
+      
     }
 
 
     // 若是有做鉴权token , 就给头部带上token
-    if (localStorage.getItem("token")) {
-      config.headers.Authorization = localStorage.getItem("token");
-    }
+    // if (localStorage.getItem("token")) {
+    //   config.headers.Authorization = localStorage.getItem("token");
+    // }
     return config;
   },
   error => {
@@ -53,56 +55,54 @@ Fetch.interceptors.response.use(
   error => {
     // 用户登录的时候会拿到一个基础信息,比如用户名,token,过期时间戳
     // 直接丢localStorage或者sessionStorage
-    if (!window.localStorage.getItem("loginUserBaseInfo")) {
-    //   // 若是接口访问的时候没有发现有鉴权的基础信息,直接返回登录页
-    //   router.push({
-    //     path: "/login"
-    //   });
-        // <Redirect to="/login"/>
-        history.push('/login');
-    } else {
+    // if (!window.localStorage.getItem("loginUserBaseInfo")) {
+    // //   // 若是接口访问的时候没有发现有鉴权的基础信息,直接返回登录页
+    // //   router.push({
+    // //     path: "/login"
+    // //   });
+    //     // <Redirect to="/login"/>
+    //     history.push('/login');
+    // } else {
       // 若是有基础信息的情况下,判断时间戳和当前的时间,若是当前的时间大于服务器过期的时间
       // 乖乖的返回去登录页重新登录
-      let lifeTime =
-        JSON.parse(window.localStorage.getItem("loginUserBaseInfo")).lifeTime *
-        1000;
-      let nowTime = new Date().getTime(); // 当前时间的时间戳
-      console.log(nowTime, lifeTime);
-      console.log(nowTime > lifeTime);
-      if (nowTime > lifeTime) {
-        // message.error("登录状态信息过期,请重新登录");
-        // router.push({
-        //   path: "/login"
-        // });
-        history.push('/login');
-      } else {
+      // let lifeTime =
+      //   JSON.parse(window.localStorage.getItem("loginUserBaseInfo")).lifeTime *
+      //   1000;
+      // let nowTime = new Date().getTime(); // 当前时间的时间戳
+      // if (nowTime > lifeTime) {
+      //   // message.error("登录状态信息过期,请重新登录");
+      //   // router.push({
+      //   //   path: "/login"
+      //   // });
+      //   history.push('/login');
+      // } else {
         // 下面是接口回调的satus ,因为我做了一些错误页面,所以都会指向对应的报错页面
-        if (error.response.status === 403) {
-        //   router.push({
-        //     path: "/error/403"
-        //   });
-          history.push('/error/403/');
-        }
-        if (error.response.status === 500) {
-        //   router.push({
-        //     path: "/error/500"
-        //   });
-        history.push('/error/403/');
-        }
-        if (error.response.status === 502) {
-        //   router.push({
-        //     path: "/error/502"
-        //   });
-          history.push('/error/502/');
-        }
-        if (error.response.status === 404) {
-        //   router.push({
-        //     path: "/error/404"
-        //   });
-          history.push('/error/404/');
-        }
-      }
-    }
+        // if (error.response.status === 403) {
+        // //   router.push({
+        // //     path: "/error/403"
+        // //   });
+        //   history.push('/error/403/');
+        // }
+        // if (error.response.status === 500) {
+        // //   router.push({
+        // //     path: "/error/500"
+        // //   });
+        // history.push('/error/403/');
+        // }
+        // if (error.response.status === 502) {
+        // //   router.push({
+        // //     path: "/error/502"
+        // //   });
+        //   history.push('/error/502/');
+        // }
+        // if (error.response.status === 404) {
+        // //   router.push({
+        // //     path: "/error/404"
+        // //   });
+        //   history.push('/error/404/');
+        // }
+      // }
+    // }
     // 返回 response 里的错误信息
     let errorInfo =  error.data.error ? error.data.error.message : error.data;
     return Promise.reject(errorInfo);
