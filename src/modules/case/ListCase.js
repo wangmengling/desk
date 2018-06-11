@@ -32,8 +32,8 @@ class ListCase extends Component {
   }
 
   componentWillMount() {
-    this.props.store.pageIsMoreData = true;
-    this.props.store.list();
+    // this.props.store.pageIsMoreData = true;
+    // this.props.store.list();
   }
 
   handleInfiniteOnLoad = () => {
@@ -59,11 +59,12 @@ class ListCase extends Component {
     return (
       <div className="CaseList">
         <div className="CaseFilter">
-          <Filter />
+        sadfasdfasdfas
+          {/* <Filter /> */}
           {/* 大发送到发 */}
         </div>
         <div className="CaseContent">
-        <InfiniteScroll
+        {/* <InfiniteScroll
           initialLoad={false}
           pageStart={0}
           loadMore={this.handleInfiniteOnLoad}
@@ -71,36 +72,8 @@ class ListCase extends Component {
           useWindow={false}
           className="CaseScrollView"
         >
-          <List
-            grid={{ gutter: 16, column: 3 }}
-            dataSource={this.props.store.dataList}
-            // dataSource={data}
-            renderItem={item => (
-              <List.Item>
-                {/* <Link 
-                to={{
-                  pathname: '/case/detail',
-                  search: `?caseId=${item._id}`,
-                  // hash: '#the-hash',
-                  state: { caseId: item._id }
-                }}> */}
-                  <Card
-                    hoverable
-                    cover={<img src={API.api.imgUrl+item.ThumbUrl} />}
-                    // cover={<img alt="example" src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png" />}
-                    onTabChange={this.toDetailAction}
-                  >
-                    <Meta
-                      title={item.Title}
-                    // description="www.instagram.com" 
-                    ></Meta>
-                  </Card>
-                {/* </Link> */}
-              </List.Item>
-            )}
-          >
-          </List>
-        </InfiniteScroll>
+          
+        </InfiniteScroll> */}
         </div>
         
       </div>

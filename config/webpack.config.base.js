@@ -1,14 +1,14 @@
 
 import path from 'path';
 import config from './index';
-
+var nodeExternals = require('webpack-node-externals');
 export default {
 
     module: {
         rules: [
             {
-                test: /\.jsx?$/,
-                loader: ['babel-loader', 'eslint-loader'],
+                test: /(\.jsx|\.js)$/,
+                loader: ['babel-loader'],
                 exclude: /node_modules/,
             },
             {
@@ -45,6 +45,14 @@ export default {
                 ],
             },
             {
+                test: /\.less$/,
+                use: [
+                  'style-loader',
+                  { loader: 'css-loader', options: { importLoaders: 1 } },
+                  'less-loader'
+                ]
+            },
+            {
                 test: /icomoon(\/|\\)style.css$/,
                 use: [
                     'style-loader',
@@ -60,6 +68,7 @@ export default {
             },
             {
                 test: /\.json$/,
+                exclude: /(node_modules)/,
                 loader: 'json-loader',
             },
             {
@@ -114,4 +123,5 @@ export default {
             fonts: path.join(config.client, 'assets/fonts/'),
         },
     },
+    externals: [nodeExternals()], // in order to ignore all modules in node_modules folder
 };

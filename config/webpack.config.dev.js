@@ -12,7 +12,7 @@ export default {
     devtool: 'cheap-module-eval-source-map',
 
     entry: [
-        `webpack-hot-middleware/client?path=http://${host}:${port}/__webpack_hmr`,
+        // `webpack-hot-middleware/client?path=http://${host}:${port}/__webpack_hmr`,
         'babel-polyfill',
         `${config.client}/index.js`,
     ],
@@ -37,5 +37,6 @@ export default {
     ],
 
     // https://github.com/chentsulin/webpack-target-electron-renderer#how-this-module-works
-    target: 'electron-renderer'
+    target: 'electron-renderer',
+    
 };

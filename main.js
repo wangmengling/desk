@@ -22,13 +22,13 @@ function createWindow () {
   //   protocol: 'file:',
   //   slashes: true
   // }))
-  if (true) {
-    mainWindow.loadURL('http://localhost:8080/')
-  }else {
+  // if (true) {
+  //   mainWindow.loadURL('http://localhost:8002/')
+  // }else {
     mainWindow.loadURL(url.format({
-      pathname: path.join(__dirname, './build/index.html'), protocol: 'file:', slashes: true }))
+      pathname: path.join(__dirname, './public/index.html'), protocol: 'file:', slashes: true }))
     
-  }
+  // }
   
   // Open the DevTools.
   mainWindow.webContents.openDevTools()

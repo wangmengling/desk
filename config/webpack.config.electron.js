@@ -11,7 +11,7 @@ export default {
     devtool: false,
 
     entry: [
-        'babel-polyfill',
+        // 'babel-polyfill',
         `./main.js`,
     ],
 

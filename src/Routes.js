@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{Component} from 'react'
 import {
   Router,
   // BrowserRouter as Router,
@@ -11,6 +11,15 @@ import DefaultLayout from "./components/layout/DefaultLayout";
 import App from './App';
 import { listCase,CaseDetail } from "./modules/case";
 
+// class App extends Component {
+//   render() {
+//     return (
+//         <div className="AppContent">
+            
+//         </div>
+//     );
+//   }
+// }
 
 const Routes = () => (
     // <Router>
@@ -18,6 +27,7 @@ const Routes = () => (
       <div>
         <DefaultLayout exact path="/" component={listCase}/> 
         <DefaultLayout exact path="/case/detail" component = {CaseDetail} />
+        {/* <Route exact path="/" component={App}/> */}
       </div>
     </Router>
   )
