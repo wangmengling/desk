@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
     "presets": ["es2017",
         "react",
         "stage-3",
@@ -7,29 +8,20 @@
       ["import", { "libraryName": "antd", "style": "css" }], // `style: true` for less，
       "transform-decorators-legacy"
     ],
+=======
+    "presets": ["env","react","stage-2"],
+>>>>>>> parent of b05d8e5... webpack 修改
     "env": {
-      "production": {
-          "presets": ["react-optimize"]
-      },
       "development": {
-          "presets": ["react-hmre"]
+      "plugins": [["react-transform", {
+         "transforms": [{
+           "transform": "react-transform-hmr",
+           
+           "imports": ["react"],
+           
+           "locals": ["module"]
+         }]
+       }]]
       }
-  }
-    // "env": {
-    //   "development": {
-    //   "plugins": [
-    //     "antd",
-    //     ["import", { libraryName: "antd", style: "css" }], // `style: true` for less，
-    //     "transform-decorators-legacy",
-    //     ["react-transform", {
-    //      "transforms": [{
-    //        "transform": "react-transform-hmr",
-           
-    //        "imports": ["react"],
-           
-    //        "locals": ["module"]
-    //      }]
-    //    }]]
-    //   }
-    // }
+    }
   }

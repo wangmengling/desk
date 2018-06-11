@@ -5,6 +5,7 @@
   "main": "main.js",
   "homepage": ".",
   "dependencies": {
+<<<<<<< HEAD
     "antd": "^3.6.1",
     "babel-loader": "^7.1.4",
     "babel-plugin-transform-decorators-legacy": "^1.3.5",
@@ -28,22 +29,25 @@
     "mobx": "^5.0.0",
     "mobx-react": "^5.2.0",
     "postcss-cssnext": "^3.1.0",
+=======
+    "axios": "^0.18.0",
+    "electron": "^1.8.3",
+    "history": "^4.7.2",
+    "inspect": "0.0.2",
+    "mobx": "^4.1.0",
+    "mobx-react": "^5.0.0",
+    "nodemon": "^1.17.1",
+>>>>>>> parent of b05d8e5... webpack 修改
     "prop-types": "^15.6.1",
-    "react": "^16.4.0",
-    "react-dom": "^16.4.0",
-    "react-image-lightbox": "^5.0.0",
-    "react-infinite-scroller": "^1.1.4",
-    "react-media-player": "^0.7.1",
-    "react-motion-ui-pack": "^0.10.3",
-    "react-photo-gallery": "^6.0.27",
-    "react-router": "^4.3.1",
-    "react-router-dom": "^4.3.1",
-    "react-scripts": "1.1.4",
-    "url-loader": "^1.0.1",
-    "webpack-dev-middleware": "^3.1.3",
-    "webpack-hot-middleware": "^2.22.2"
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-infinite-scroller": "^1.1.3",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.1.1"
   },
   "devDependencies": {
+<<<<<<< HEAD
     "autoprefixer": "^8.6.1",
     "axios": "^0.18.0",
     "babel-cli": "^6.26.0",
@@ -57,14 +61,28 @@
     "babel-preset-react-hmre": "^1.1.1",
     "babel-preset-react-optimize": "^1.0.1",
     "babel-preset-stage-3": "^6.24.1",
+=======
+    "autoprefixer": "^8.2.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-react-transform": "^3.0.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+>>>>>>> parent of b05d8e5... webpack 修改
     "css-loader": "^0.28.11",
-    "electron-packager": "^12.1.0",
     "file-loader": "^1.1.11",
+<<<<<<< HEAD
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
+=======
+    "html-webpack-plugin": "^3.1.0",
+>>>>>>> parent of b05d8e5... webpack 修改
     "json-loader": "^0.5.7",
-    "less": "^3.0.4",
+    "less": "^3.0.1",
     "less-loader": "^4.1.0",
+<<<<<<< HEAD
     "nodemon": "^1.17.5",
     "postcss-import": "^11.1.0",
     "postcss-loader": "^2.1.5",
@@ -90,5 +108,19 @@
     "hot-servers": "./node_modules/.bin/nodemon  scripts/dev.js  --exec babel-node",
     "start-hot": "cross-env HOT=1 NODE_ENV=development ./node_modules/.bin/electron -r babel-register -r babel-polyfill ./main",
     "dev": "concurrently --kill-others \"npm run hot-servers\" \"npm run start-hot\""
+=======
+    "postcss-loader": "^2.1.3",
+    "raw-loader": "^0.5.1",
+    "react-transform-hmr": "^1.0.4",
+    "style-loader": "^0.20.3",
+    "webpack": "^4.3.0",
+    "webpack-cli": "^2.0.13",
+    "webpack-dev-server": "^3.1.1"
+  },
+  "scripts": {
+    "estart": "electron .",
+    "server": "webpack-dev-server --open",
+    "webpacks": "webpack"
+>>>>>>> parent of b05d8e5... webpack 修改
   }
 }
