@@ -9,6 +9,7 @@ import webpackDevMiddleware from 'webpack-dev-middleware';
 import webpackHotMiddleware from 'webpack-hot-middleware';
 
 import config from '../config';
+// import webpackConfig from '../config/webpack.config.dev';
 import webpackConfig from '../webpack.config';
 
 const app = new express();

@@ -8,7 +8,7 @@ import { Meta } from "antd/lib/list/Item";
 import CaseBlock from "./CaseBlock";
 import { observer } from "mobx-react";
 import API from "../../../config/API.config";
-// import { electron } from "electron";
+import { BrowserWindow } from "electron";
 // import { spawn } from "child_process";
 // const fs  = require（"fs"）
 // import fs from "fs";
@@ -50,9 +50,9 @@ class ListCase extends Component {
   }
 
   toDetailAction = () => {
-  
-    // let win = new BrowserWindow({backgroundColor: '#2e2c29'})
-    // win.loadURL('https://github.com')
+    console.log("sdfsdf")
+    let win = new BrowserWindow({backgroundColor: '#2e2c29'})
+    win.loadURL('https://github.com')
   }
 
   render() {
@@ -88,7 +88,7 @@ class ListCase extends Component {
                     hoverable
                     cover={<img src={API.api.imgUrl+item.ThumbUrl} />}
                     // cover={<img alt="example" src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png" />}
-                    onTabChange={this.toDetailAction}
+                    onClick={this.toDetailAction}
                   >
                     <Meta
                       title={item.Title}

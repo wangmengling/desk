@@ -23,7 +23,7 @@ function createWindow () {
   //   slashes: true
   // }))
   if (true) {
-    mainWindow.loadURL('http://localhost:8002/')
+    mainWindow.loadURL('http://localhost:4008/')
   }else {
     mainWindow.loadURL(url.format({
       pathname: path.join(__dirname, './public/index.html'), protocol: 'file:', slashes: true }))

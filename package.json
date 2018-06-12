@@ -91,8 +91,7 @@
     "lint": "npm run css-lint && npm run js-lint",
     "hot-servers": "cross-env NODE_ENV=development node -r babel-register scripts/dev.js",
     "hot-server": "./node_modules/.bin/nodemon  scripts/dev.js  --exec babel-node",
-    "start-hots": "cross-env HOT=1 NODE_ENV=development ./node_modules/.bin/electron -r babel-register -r babel-polyfill ./main",
-    "start-hot": "electron .",
-    "dev": "concurrently --kill-others \"npm run hot-server\" \"npm run start-hots\""
+    "start-hot": "cross-env HOT=1 NODE_ENV=development ./node_modules/.bin/electron -r babel-register -r babel-polyfill ./main",
+    "dev": "concurrently --kill-others \"npm run hot-servers\" \"npm run start-hot\""
   }
 }

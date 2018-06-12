@@ -18,13 +18,13 @@ export default {
                     'style-loader',
                     {
                         loader: 'css-loader',
-                        options: {
-                            // Note that we’ve set importLoaders: 1 on css-loader.
-                            // We’re setting this because we want PostCSS to git @import statements first
-                            modules: true,
-                            importLoaders: 1,
-                            localIdentName: '[path][name]__[local]--[hash:base64:5]'
-                        },
+                        // options: {
+                        //     // Note that we’ve set importLoaders: 1 on css-loader.
+                        //     // We’re setting this because we want PostCSS to git @import statements first
+                        //     modules: true,
+                        //     importLoaders: 1,
+                        //     localIdentName: '[path][name]__[local]--[hash:base64:5]'
+                        // },
                     },
                     {
                         loader: 'postcss-loader',
@@ -111,7 +111,7 @@ export default {
         filename: 'bundle.js',
 
         // https://github.com/webpack/webpack/issues/1114
-        libraryTarget: 'commonjs2'
+        // libraryTarget: 'commonjs2'
     },
 
     resolve: {
@@ -123,5 +123,5 @@ export default {
             fonts: path.join(config.client, 'assets/fonts/'),
         },
     },
-    externals: [nodeExternals()], // in order to ignore all modules in node_modules folder
+    // externals: [nodeExternals()], // in order to ignore all modules in node_modules folder
 };
