@@ -27,9 +27,9 @@ app.use(webpackHotMiddleware(compiler));
 app.disable('etag');
 app.use(express.static('public'));
 // app.use(Express.static(path.join(__dirname, 'static')));
-app.get("/*", function(req, res) {
-  res.sendFile(__dirname + '/public/index.html');
-});
+// app.get("/*", function(req, res) {
+//   res.sendFile(__dirname + '/public/index.html');
+// });
 app.listen(config.server.port, config.server.host, err => {
     if (err) {
         console.error(err);

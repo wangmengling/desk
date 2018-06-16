@@ -93,5 +93,6 @@
     "hot-server": "./node_modules/.bin/nodemon  scripts/dev.js  --exec babel-node",
     "start-hot": "cross-env HOT=1 NODE_ENV=development ./node_modules/.bin/electron -r babel-register -r babel-polyfill ./main",
     "dev": "concurrently --kill-others \"npm run hot-servers\" \"npm run start-hot\""
+    
   }
 }

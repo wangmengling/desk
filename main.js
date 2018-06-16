@@ -4,6 +4,7 @@ const electron = require('electron')
 const app = electron.app
 // Module to create native browser window.
 const BrowserWindow = electron.BrowserWindow
+// const Menu = electron.Menu
 
 const path = require('path')
 const url = require('url')
@@ -14,7 +15,19 @@ let mainWindow
 
 function createWindow () {
   // Create the browser window.
-  mainWindow = new BrowserWindow({width: 800, height: 600})
+  mainWindow = new BrowserWindow({
+    width: 800, 
+    height: 600,
+    autoHideMenuBar: true,
+    fullscreenable: false,
+    webPreferences: {
+        javascript: true,
+        plugins: true,
+        nodeIntegration: false, // 不集成 Nodejs
+        webSecurity: false,
+        preload: path.join(__dirname, './public/renderer.js') // 但预加载的 js 文件内仍可以使用 Nodejs 的 API
+    }
+  })
 
   // and load the index.html of the app.
   // mainWindow.loadURL(url.format({
@@ -40,6 +53,9 @@ function createWindow () {
     // when you should delete the corresponding element.
     mainWindow = null
   })
+
+  // const mainMenu =  Menu.buildFromTemplate(menuTemplate)
+  // Menu.setApplicationMenu(mainMenu)
 }
 
 // This method will be called when Electron has finished
@@ -66,3 +82,18 @@ app.on('activate', function () {
 
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
+
+const menuTemplate = [
+  {
+    label:"file",
+    submenu:[
+      {
+        label:"quit",
+        accelerator:process.platform == 'darwin' ? 'Command+Q' : 'Ctrl+Q',
+        click(){
+          app.quit();
+        }
+      }
+    ]
+  }
+]

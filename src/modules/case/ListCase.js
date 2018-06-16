@@ -8,13 +8,9 @@ import { Meta } from "antd/lib/list/Item";
 import CaseBlock from "./CaseBlock";
 import { observer } from "mobx-react";
 import API from "../../../config/API.config";
-import { BrowserWindow } from "electron";
-// import { spawn } from "child_process";
-// const fs  = require（"fs"）
-// import fs from "fs";
 
-
-
+const electron = window.electron
+const {dialog,BrowserWindow,BrowserView} = electron.remote;
 
 @observer
 class ListCase extends Component {
@@ -29,6 +25,7 @@ class ListCase extends Component {
     }
     this.props.store.pageSize = 10;
     this.props.store.pageIndex = 0;
+    // this.toDetailAction = this.toDetailAction.bind(this)
   }
 
   componentWillMount() {
@@ -49,10 +46,14 @@ class ListCase extends Component {
     this.props.store.list();
   }
 
-  toDetailAction = () => {
-    console.log("sdfsdf")
-    let win = new BrowserWindow({backgroundColor: '#2e2c29'})
-    win.loadURL('https://github.com')
+  toDetailAction(itemId){
+    let win = new BrowserWindow({width: 800, height: 600})
+    win.on('closed', () => {
+      win = null
+    })
+    console.log(itemId)
+    // 加载远程URL
+    win.loadURL(`http://localhost:3002/case/detail?caseId=${itemId}`)
   }
 
   render() {
@@ -88,7 +89,7 @@ class ListCase extends Component {
                     hoverable
                     cover={<img src={API.api.imgUrl+item.ThumbUrl} />}
                     // cover={<img alt="example" src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png" />}
-                    onClick={this.toDetailAction}
+                    onClick={this.toDetailAction.bind(this,item._id)}
                   >
                     <Meta
                       title={item.Title}
