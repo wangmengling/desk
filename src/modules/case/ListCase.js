@@ -8,10 +8,12 @@ import { Meta } from "antd/lib/list/Item";
 import CaseBlock from "./CaseBlock";
 import { observer } from "mobx-react";
 import API from "../../../config/API.config";
+// import { resolve } from "dns";
 
 const electron = window.electron
-const {dialog,BrowserWindow,BrowserView} = electron.remote;
-
+const {dialog,BrowserWindow,BrowserView,shell} = electron.remote;
+const path = require('path')
+const TabGroup = require("electron-tabs");
 @observer
 class ListCase extends Component {
   constructor(props) {
@@ -47,13 +49,29 @@ class ListCase extends Component {
   }
 
   toDetailAction(itemId){
-    let win = new BrowserWindow({width: 800, height: 600})
-    win.on('closed', () => {
-      win = null
-    })
-    console.log(itemId)
-    // 加载远程URL
-    win.loadURL(`http://localhost:3002/case/detail?caseId=${itemId}`)
+    // let win = new BrowserWindow({
+    //   width: 800, 
+    //   height: 600,
+    //   webPreferences: {
+    //       javascript: true,
+    //       plugins: true,
+    //       nodeIntegration: false, // 不集成 Nodejs
+    //       webSecurity: false,
+    //       preload: path.resolve('file://',__dirname, '../../../public/renderer.js') // 但预加载的 js 文件内仍可以使用 Nodejs 的 API
+    //   }
+    //   })
+    // win.on('closed', () => {
+    //   win = null
+    // })
+    // console.log(itemId)
+    // let view = new BrowserView({
+    //   webPreferences: {
+    //     nodeIntegration: false
+    //   }
+    // })
+    // win.setBrowserView(view)
+    // view.setBounds({ x: 0, y: 0, width: 300, height: 300 })
+    // view.webContents.loadURL('https://electronjs.org')
   }
 
   render() {

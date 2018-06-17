@@ -13,6 +13,7 @@
     "concurrently": "^3.5.1",
     "cross-env": "^5.1.6",
     "electron": "^2.0.2",
+    "electron-tabs": "^0.9.1",
     "eslint": "^4.19.1",
     "eslint-config-standard": "^11.0.0",
     "eslint-config-standard-react": "^6.0.0",
@@ -25,6 +26,7 @@
     "express": "^4.16.3",
     "history": "^4.7.2",
     "inspect": "0.0.2",
+    "jquery": "^3.3.1",
     "mobx": "^5.0.0",
     "mobx-react": "^5.2.0",
     "postcss-cssnext": "^3.1.0",
@@ -59,6 +61,7 @@
     "babel-preset-react-optimize": "^1.0.1",
     "babel-preset-stage-2": "^6.24.1",
     "babel-preset-stage-3": "^6.24.1",
+    "chrome-tabs": "^1.0.0",
     "css-loader": "^0.28.11",
     "electron-packager": "^12.1.0",
     "file-loader": "^1.1.11",
@@ -81,7 +84,7 @@
     "webpack-target-electron-renderer": "^0.4.0"
   },
   "scripts": {
-    "e":"electron .",
+    "e": "electron .",
     "estart": "webpack-dev-server --open --config webpack.config.js && electron .",
     "server": "webpack-dev-server --open --config webpack.config.js",
     "webpacks": "webpack",
@@ -93,6 +96,5 @@
     "hot-server": "./node_modules/.bin/nodemon  scripts/dev.js  --exec babel-node",
     "start-hot": "cross-env HOT=1 NODE_ENV=development ./node_modules/.bin/electron -r babel-register -r babel-polyfill ./main",
     "dev": "concurrently --kill-others \"npm run hot-servers\" \"npm run start-hot\""
-    
   }
 }

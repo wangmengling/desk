@@ -4,25 +4,22 @@
 <head>
     <meta charset="utf-8">
     <title>weweChat</title>
-</head>
+    <link rel="stylesheet" href="node_modules/x-chrome-tabs/src/css/base.min.css" />
+    <style>
+            html,
+            body {
+              margin:                     0;
+              padding:                    0;
+              overflow:                   hidden;
+              background-color:           #e6e6e6;
+            }
+          </style>
 <body style="margin: 0px;padding: 0px;">
         <!-- <script src="http://localhost:4008/renderer.js"></script>-->
-        <!-- <script src="http://localhost:4008/renderer.js"></script> -->
-        <!-- <webview id="foo" src="https://www.github.com/" nodeintegration plugins style="display:inline-block; width:640px; height:480px">d</webview> -->
-    <div id="root">
-        
-    </div>
-    <!-- <webview id="foo" src="http://localhost:4008/test.html" style="width:100%; height:360px;"></webview>
-    <script>
-        // const {shell} = require('electron')
-        const webview = document.getElementById('foo')
-        webview.addEventListener('new-window',(e)=> {
-            const protocol = require('url').parse(e.url).protocol
-            if (protocol === 'http:' || protocol === "https:") {
-                window.open(e.url)
-            }
-        })
-    </script> -->
+        <div class="chrome-tabs"></div>
+        <div id="root">
+                
+        </div>
     <script src="http://localhost:4008/bundle.js"></script>
     <!-- <script>
         if (process.env.HOT) {
@@ -35,6 +32,14 @@
             document.body.appendChild(script);
         }
     </script> -->
-
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+            let $ = require('jquery');
+            $.fn.chromeTabs = require('x-chrome-tabs');
+          
+            $(document).ready(() => {
+              $('.chrome-tabs').chromeTabs({views: 'webviews'});
+            });
+          </script>
 </body>
 </html>
