@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>weweChat</title>
+    <link rel="stylesheet" href="node_modules/x-chrome-tabs/src/css/base.min.css" />
+    <style>
+            html,
+            body {
+              margin:                     0;
+              padding:                    0;
+              overflow:                   hidden;
+              background-color:           #e6e6e6;
+            }
+          </style>
+<body style="margin: 0px;padding: 0px;">
+        <!-- <script src="http://localhost:4008/renderer.js"></script>-->
+        <div class="chrome-tabs"></div>
+        <div id="root">
+                
+        </div>
+    <script src="http://localhost:4008/bundle.js"></script>
+    <!-- <script>
+        if (process.env.HOT) {
+            let script = document.createElement('script');
+            let port = process.env.PORT || 4008;
+
+            script.async = '';
+            script.src = `http://localhost:${port}/dist/bundle.js`;
+
+            document.body.appendChild(script);
+        }
+    </script> -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+            let $ = require('jquery');
+            $.fn.chromeTabs = require('x-chrome-tabs');
+          
+            $(document).ready(() => {
+              $('.chrome-tabs').chromeTabs({views: 'webviews'});
+            });
+          </script>
+</body>
+</html>
