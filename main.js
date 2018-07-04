@@ -20,10 +20,13 @@ function createWindow () {
     height: 600,
     autoHideMenuBar: true,
     fullscreenable: false,
+    protocol: "file:",
+    slashes:true,
     webPreferences: {
         javascript: true,
         plugins: true,
-        nodeIntegration: false, // 不集成 Nodejs
+        // nativeWindowOpen: true, //
+        nodeIntegration: true, // 不集成 Nodejs 如果为false 不能显示webview
         webSecurity: false,
         preload: path.join(__dirname, './public/renderer.js') // 但预加载的 js 文件内仍可以使用 Nodejs 的 API
     }

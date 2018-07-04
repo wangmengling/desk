@@ -10,13 +10,15 @@ import history from "./History";
 import DefaultLayout from "./components/layout/DefaultLayout";
 import App from './App';
 import { listCase,CaseDetail } from "./modules/case";
+import Index from "./modules/index/index";
 
 
 const Routes = () => (
     // <Router>
     <Router history={history}> 
       <div>
-        <DefaultLayout exact path="/" component={listCase}/> 
+        <Route exact path="/" component={Index} />
+        <DefaultLayout exact path="/case" component={listCase}/> 
         <DefaultLayout exact path="/case/detail" component = {CaseDetail} />
       </div>
     </Router>

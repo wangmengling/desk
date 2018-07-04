@@ -8,6 +8,7 @@ import { Meta } from "antd/lib/list/Item";
 import CaseBlock from "./CaseBlock";
 import { observer } from "mobx-react";
 import API from "../../../config/API.config";
+const WebView = require('react-electron-web-view');
 // import { resolve } from "dns";
 
 const electron = window.electron
@@ -49,35 +50,36 @@ class ListCase extends Component {
   }
 
   toDetailAction(itemId){
-    // let win = new BrowserWindow({
-    //   width: 800, 
-    //   height: 600,
-    //   webPreferences: {
-    //       javascript: true,
-    //       plugins: true,
-    //       nodeIntegration: false, // 不集成 Nodejs
-    //       webSecurity: false,
-    //       preload: path.resolve('file://',__dirname, '../../../public/renderer.js') // 但预加载的 js 文件内仍可以使用 Nodejs 的 API
-    //   }
-    //   })
-    // win.on('closed', () => {
-    //   win = null
-    // })
-    // console.log(itemId)
-    // let view = new BrowserView({
-    //   webPreferences: {
-    //     nodeIntegration: false
-    //   }
-    // })
-    // win.setBrowserView(view)
-    // view.setBounds({ x: 0, y: 0, width: 300, height: 300 })
-    // view.webContents.loadURL('https://electronjs.org')
+    let win = new BrowserWindow({
+      width: 800, 
+      height: 600,
+      webPreferences: {
+          javascript: true,
+          plugins: true,
+          nodeIntegration: false, // 不集成 Nodejs
+          webSecurity: false,
+          preload: path.resolve('file://',__dirname, '../../../public/renderer.js') // 但预加载的 js 文件内仍可以使用 Nodejs 的 API
+      }
+      })
+    win.on('closed', () => {
+      win = null
+    })
+    console.log(path.resolve( '../../../public/renderer.js'))
+    let view = new BrowserView({
+      webPreferences: {
+        nodeIntegration: false
+      }
+    })
+    win.setBrowserView(view)
+    view.setBounds({ x: 0, y: 0, width: 300, height: 300 })
+    view.webContents.loadURL(`http://localhost:4008/case/detail?caseId=${itemId}`)
   }
 
   render() {
     return (
       <div className="CaseList">
         <div className="CaseFilter">
+        <WebView src="https://www.baidu.com" />
           <Filter />
           {/* 大发送到发 */}
         </div>
