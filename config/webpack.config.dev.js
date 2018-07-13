@@ -32,7 +32,9 @@ export default {
 
         // NODE_ENV should be production so that modules do not perform certain development checks
         new webpack.DefinePlugin({
-            'process.env.NODE_ENV': JSON.stringify('development')
+            'process.env.NODE_ENV': JSON.stringify('development'),
+            'global': {}, // bizarre lodash(?) webpack workaround
+            'global.GENTLY': false // superagent client fix
         }),
     ],
 
