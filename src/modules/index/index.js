@@ -39,8 +39,23 @@ class Index extends Component {
     render() {
         return (
             <div>
-                    {/* webpreferences="nodeIntegration=true,webSecurity: false,javascript: true,plugins: true" */}
+                <div id="navbar" className="theme-background-color theme-text-color windowDragHandle" tabindex="-1">
+                    <div id="tabs"></div>
+                </div>
+
+                <div id="webviews">
+                    <div id="leftArrowContainer" className="arrow-indicator">
+                        <i id="leftArrow" className="fa fa-arrow-left arrow"></i>
+                    </div>
+                    <div id="rightArrowContainer" className="arrow-indicator">
+                        <i id= "rightArrow" className="fa fa-arrow-right arrow"></i>
+                    </div>
                     <webview id="foo" src="http://localhost:4008/case" style={{display:"inline-flex",width:"640px", height:"480px"}} nodeintegration="true"  allowpopups></webview>
+                </div>
+                
+
+                    {/* webpreferences="nodeIntegration=true,webSecurity: false,javascript: true,plugins: true" */}
+                    
             </div>
             
         )

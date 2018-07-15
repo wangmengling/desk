@@ -23,6 +23,7 @@ function createWindow () {
     protocol: "file:",
     slashes:true,
     frame:false,
+    titleBarStyle: 'hidden',
     webPreferences: {
         javascript: true,
         plugins: true,
