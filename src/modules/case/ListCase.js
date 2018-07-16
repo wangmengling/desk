@@ -8,17 +8,7 @@ import { Meta } from "antd/lib/list/Item";
 import CaseBlock from "./CaseBlock";
 import { observer } from "mobx-react";
 import API from "../../../config/API.config";
-// const WebView = require('react-electron-web-view');
-// import { resolve } from "dns";
-
-// const electron = window.electron
-// const {dialog,BrowserWindow,BrowserView,shell} = electron.remote;
-// const {BrowserWindow,BrowserView} = require('electron').remote
-// var remote = require('electron').remote;
-// var BrowserView = remote.BrowserView;
-// var BrowserWindow = remote.BrowserWindow;
-// const path = require('path')
-// const TabGroup = require("electron-tabs");
+const {ipcRenderer}  = window.require("electron")
 
 @observer
 class ListCase extends Component {
@@ -39,6 +29,9 @@ class ListCase extends Component {
   componentWillMount() {
     this.props.store.pageIsMoreData = true;
     this.props.store.list();
+    ipcRenderer.on('ping', () => {
+      ipcRenderer.sendToHost('pong')
+    })
   }
 
   handleInfiniteOnLoad = () => {
@@ -55,29 +48,16 @@ class ListCase extends Component {
   }
 
   toDetailAction(itemId){
-    // let win = new BrowserWindow({
-    //   width: 800, 
-    //   height: 600,
-    //   webPreferences: {
-    //       javascript: true,
-    //       plugins: true,
-    //       nodeIntegration: false, // 不集成 Nodejs
-    //       webSecurity: false,
-    //       preload: path.resolve('file://',__dirname, '../../../public/renderer.js') // 但预加载的 js 文件内仍可以使用 Nodejs 的 API
-    //   }
-    //   })
-    // win.on('closed', () => {
-    //   win = null
-    // })
-    // console.log(path.resolve( '../../../public/renderer.js'))
-    // let view = new BrowserView({
-    //   webPreferences: {
-    //     nodeIntegration: false
-    //   }
-    // })
-    // win.setBrowserView(view)
-    // view.setBounds({ x: 0, y: 0, width: 300, height: 300 })
-    // view.webContents.loadURL(`http://localhost:4008/case/detail?caseId=${itemId}`)
+    ipcRenderer.sendToHost(itemId)
+        // webview.addEventListener('new-window', (e) => {
+        //     const protocol = require('url').parse(e.url).protocol
+        //     console.log(protocol)
+        //     if (protocol === 'http:' || protocol === 'https:') {
+        //         //shell.openExternal(e.url)
+        //         window.open(e.url)
+                
+        //     }
+        // });
   }
 
   render() {
@@ -102,25 +82,25 @@ class ListCase extends Component {
             // dataSource={data}
             renderItem={item => (
               <List.Item>
-                <Link 
+                {/* <Link 
                 to={{
                   pathname: '/case/detail',
                   search: `?caseId=${item._id}`,
                   // hash: '#the-hash',
                   state: { caseId: item._id }
-                }}>
+                }}> */}
                   <Card
                     hoverable
                     cover={<img src={API.api.imgUrl+item.ThumbUrl} />}
                     // cover={<img alt="example" src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png" />}
-                    // onClick={this.toDetailAction.bind(this,item._id)}
+                    onClick={this.toDetailAction.bind(this,item._id)}
                   >
                     <Meta
                       title={item.Title}
                     // description="www.instagram.com" 
                     ></Meta>
                   </Card>
-                </Link>
+                {/* </Link> */}
               </List.Item>
             )}
           >

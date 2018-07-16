@@ -1,5 +1,5 @@
 var lastTabDeletion = 0 //TODO get rid of this
-
+import webviews from "./webviews";
 var tabBar = {
     container: document.getElementById('tabs'),
     tabElementMap: {}, //tabId: tab element
@@ -322,8 +322,9 @@ var tabBar = {
     }
 }
 
+export default tabBar
 // when we click outside the navbar, we leave editing mode
 
-webviews.bindEvent('focus', function () {
-    tabBar.leaveEditMode()
-})
+// webviews.bindEvent('focus', function () {
+//     tabBar.leaveEditMode()
+// })

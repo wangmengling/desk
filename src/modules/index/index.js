@@ -1,21 +1,14 @@
 import React,{ Component } from "react";
 const TabGroup = require("electron-tabs");
-const  {dialog,BrowserWindow,BrowserView,shell,webview}  = window.require("electron").remote
+const  {dialog,BrowserWindow,BrowserView,shell,webview,ipcMain}  = window.require("electron").remote
+
+
+import tabBar from "../../components/navbar/tabBar";
+import tabState from "../../components/navbar/tabState"
+
 class Index extends Component {
     props(){
         super.props()
-        // const webview = document.getElementById('foo')
-        // console.log(webview);
-        
-        // webview.addEventListener('new-window', (e) => {
-        //     const protocol = require('url').parse(e.url).protocol
-        //     console.log(protocol)
-        //     if (protocol === 'http:' || protocol === 'https:') {
-        //         //shell.openExternal(e.url)
-        //         window.open(e.url)
-                
-        //     }
-        // });
     }
     componentDidMount() {
         const webview = document.getElementById('foo')
@@ -34,13 +27,34 @@ class Index extends Component {
         webview.addEventListener('dom-ready', () => {
             webview.openDevTools()
         })
+
+        // const webview = document.getElementById('foo')
+        webview.addEventListener('ipc-message', (event) => {
+            console.log(event.channel)
+            this.openViews(event.channel)
+        })
+    }
+
+    openViews(itemId) {
+        const tab = document.getElementById('tabs')
+        // var newTab = tabs.add({
+        //     url: e.url,
+        //     private: tabs.get(tab).private // inherit private status from the current tab
+        //   }, 0)
+        // tabBar.addTab(newTab)
+        // console.log(tabView);
+        tabBar.addTab(currentTask.tabs.add(), {
+            leaveEditMode: false // we know we aren't in edit mode yet, so we don't have to leave it
+        })
+        console.log(itemId)
     }
 
     render() {
         return (
             <div>
                 <div id="navbar" className="theme-background-color theme-text-color windowDragHandle" tabindex="-1">
-                    <div id="tabs"></div>
+                    <div id="tabs">
+                    </div>
                 </div>
 
                 <div id="webviews">
