@@ -248,5 +248,3 @@ function initializeTabState () {
 }
 
 initializeTabState()
-
-export default tabPrototype;
