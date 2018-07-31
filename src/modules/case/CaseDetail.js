@@ -8,7 +8,7 @@ import "./CaseDetail.less";
 import API from "../../../config/API.config";
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
-
+const {ipcRenderer}  = window.require("electron")
 import Gallery from 'react-photo-gallery';
 
 const images = [
@@ -24,6 +24,7 @@ class CaseDetail extends Component {
         super(props, context);
         // this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
         this.openLightbox = this.openLightbox.bind(this);
+        console.log("dddddddddddd")
         this.state = {
             photoIndex: 0,
             isOpen: false,
@@ -32,8 +33,16 @@ class CaseDetail extends Component {
     componentWillMount() {
         // this.props.store.detail();
         // console.log(this.props.location.state)
-        // console.log(this.props)
-        var { caseId } = this.props.location.state;
+        ipcRenderer.on('detailData', (event,message) => {
+            console.log("==")
+            console.log(message)
+            console.log("==")
+            // ipcRenderer.sendToHost('pong')
+        })
+        console.log(this.props)
+        
+        // var { caseId } = this.props.location.state;
+        var caseId = "5af14e4dcd6b055d3757ea0e"
         CaseStore.detailById(API.api.case.detailById, caseId);
     }
 
@@ -71,6 +80,7 @@ class CaseDetail extends Component {
         
         return (
             <div className="CaseDetail">
+            asdfasdfasdf
                 {/* <Card className="CaseDetailCardImage" bordered={false} style={{ width: '100%' }}>
                     <List
                         grid={{ gutter: 16, column: 3 }}

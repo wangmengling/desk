@@ -42,7 +42,7 @@ class Index extends Component {
 
     openViews(itemId) {
         // NavBar.add()
-        var url =  API.api.case.detailById + "?caseId=" + itemId
+        var url =  API.api.baseUrl + "/case/detail?caseId=" + itemId
         var nav = {url:url}
         var nabbarId = AppState.add(nav)
         NavBar.container = document.getElementById('tabs')
@@ -56,7 +56,7 @@ class Index extends Component {
     render() {
         return (
             <div>
-                {/* <button id="switch-task-button" className="fa fa-bars navbar-action-button theme-text-color windowDragHandle" data-label="viewTasks"></button> */}
+                <button id="switch-task-button" className="fa fa-bars navbar-action-button theme-text-color windowDragHandle" data-label="viewTasks"></button>
 
                 <div className="windows-drag-area"></div>
                 <div className="windows-caption-buttons">
@@ -113,10 +113,12 @@ class Index extends Component {
                     <webview  src="http://www.ifeng.com/"   data-tab="66905130000109110" className="hidden" tabindex="-1" guestinstance="1" last-load-event="1531920237059" ></webview>
                 </div> */}
                 <div id="webviews">
-                    <webview id="foo" src="http://localhost:4008/case"  tabindex="-1" nodeintegration="true"  allowpopups ></webview>
-                    <webview  src="https://www.baidu.com/" data-tab="44424510246504890" className="hidden" tabindex="-1" guestinstance="1" last-load-event="1531996614732" aria-hidden="true" nodeintegration="true"  allowpopups></webview>
-                    <webview tabindex="-1"  src="http://www.ifeng.com/" data-tab="66905130000109110" className="hidden" guestinstance="2" last-load-event="1531996678324" aria-hidden="true"></webview>
+                    
+                    {/* <webview  src="https://www.baidu.com/" data-tab="44424510246504890" className="hidden" tabindex="-1" guestinstance="1" last-load-event="1531996614732" aria-hidden="true" nodeintegration="true"  allowpopups></webview>
+                    <webview tabindex="-1"  src="http://www.ifeng.com/" data-tab="66905130000109110" className="hidden" guestinstance="2" last-load-event="1531996678324" aria-hidden="true"></webview> */}
                     {/* <webview id="foo" tabindex="-1"  src="http://localhost:4008/case" data-tab="35038458853567932" className="" guestinstance="3"  nodeintegration="true"  allowpopups></webview> */}
+                    <webview id="foo" src="http://localhost:4008/case"  tabindex="-1" nodeintegration="true" data-tab="188" allowpopups ></webview>
+                    {/* <webview id="foo" tabindex="-1" src="http://localhost:4008/case/detail?caseId=5af14e4dcd6b055d3757ea0e"  nodeintegration="true" guestinstance="27" allowpopups></webview> */}
                 </div>
                 
                     {/* webpreferences="nodeIntegration=true,webSecurity: false,javascript: true,plugins: true" */}
