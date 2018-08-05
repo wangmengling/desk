@@ -34,8 +34,13 @@ body.mac #navbar {
 }
 
 /* make room for the window controls */
-body.mac:not(.fullscreen) #navbar {
+/* body.mac:not(.fullscreen) #navbar {
 	padding-left: 75px;
+} */
+
+#navbar {
+	padding-left: 75px;
+	background-color: #EEEEEE;
 }
 
 body.windows #navbar {
@@ -53,7 +58,8 @@ body.windows #navbar {
 	position: absolute;
 	bottom: 0;
 	left: 0;
-	background: rgba(0, 0, 0, 0.075);
+	/* background: rgba(0, 0, 0, 0.075); */
+	background: #EEEEEE;
 }
 
 /* dark colors don't need to be darkened as much for contrast */
@@ -102,10 +108,10 @@ body:not(.windows) #menu-button {
 	word-break: break-all;
 	position: relative;
 	/* border: 1px solid #FFFFFF; */
-	background-color: #EEEEEE;
+	background-color: #FFFFFF;
 }
 .tab-item:not(.active):hover {
-	background-color: rgba(255, 255, 255, 0.1);
+	/* background-color: rgba(255, 255, 255, 0.1); */
 }
 
 .tab-view-contents {

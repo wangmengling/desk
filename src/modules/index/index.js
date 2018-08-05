@@ -8,6 +8,7 @@ import "./index.less"
 import "./tabBar.css"
 import "./windowsCaptionButtons.css"
 import "./webviews.css"
+import "./base.css"
 import AppState from "../../components/AppState/AppState";
 import WebView from "../../components/WebView/WebView";
 
@@ -56,32 +57,6 @@ class Index extends Component {
     render() {
         return (
             <div>
-                <button id="switch-task-button" className="fa fa-bars navbar-action-button theme-text-color windowDragHandle" data-label="viewTasks"></button>
-
-                <div className="windows-drag-area"></div>
-                <div className="windows-caption-buttons">
-                    <div className="element caption-minimise">
-                        <svg>
-                            <line x1="1" y1="5.5" x2="11" y2="5.5" />
-                        </svg>
-                    </div>
-                    <div className="element caption-maximise">
-                        <svg>
-                            <rect x="1.5" y="1.5" width="9" height="9" />
-                        </svg>
-                    </div>
-                    <div className="element caption-restore">
-                        <svg>
-                            <rect x="1.5" y="3.5" width="7" height="7" />
-                            <polyline points="3.5,3.5 3.5,1.5 10.5,1.5 10.5,8.5 8.5,8.5" />
-                        </svg>
-                    </div>
-                    <div className="element caption-close">
-                        <svg>
-                            <path d="M1,1 l 10,10 M1,11 l 10,-10" />
-                        </svg>
-                    </div>
-                </div>
                 <div id="navbar" className="theme-background-color theme-text-color windowDragHandle" tabindex="-1">
                     <div id="tabs">
                         <div className="tab-item fade" data-tab="38181023441599370" title="Yes+青年公寓(会展中心店)电话,地址,营业时间,人均,评价,优惠,代金券,相册--百度糯米">

@@ -138,7 +138,7 @@ var WebView = {
       }
   
       var wv = WebView.get(id)
-  
+      console.log(webviewEls)
       if (!wv) {
         wv = WebView.add(id)
       }

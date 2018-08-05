@@ -30,7 +30,7 @@ var AppState = {
       return tabId
     },
     update: function (id, data) {
-      if (!this.contents.has(id)) {
+      if (!this.has(id)) {
         throw new ReferenceError('Attempted to update a tab that does not exist.')
       }
       var index = -1
@@ -77,8 +77,8 @@ var AppState = {
       return undefined
     },
     has: function (id) {
-      for (var i = 0; i < this.length; i++) {
-        if (this[i].id === id) {
+      for (var i = 0; i < this.contents.length; i++) {
+        if (this.contents[i].id === id) {
           return true
         }
       }
@@ -93,37 +93,38 @@ var AppState = {
       return -1
     },
     getSelected: function () {
-      for (var i = 0; i < this.length; i++) {
-        if (this[i].selected) {
-          return this[i].id
+      for (var i = 0; i < this.contents.length; i++) {
+        if (this.contents[i].selected) {
+          return this.contents[i].id
         }
       }
       return null
     },
     getAtIndex: function (index) {
-      return this[index] || undefined
+      return this.contents[index] || undefined
     },
     setSelected: function (id) {
+      console.log(this.contents)
       if (!this.has(id)) {
         throw new ReferenceError('Attempted to select a tab that does not exist.')
       }
-      for (var i = 0; i < this.length; i++) {
-        if (this[i].id === id) {
-          this[i].selected = true
+      for (var i = 0; i < this.contents.length; i++) {
+        if (this.contents[i].id === id) {
+          this.contents[i].selected = true
         } else {
-          this[i].selected = false
+          this.contents[i].selected = false
         }
       }
     },
     count: function () {
-      return this.length
+      return this.contents.length
     },
     isEmpty: function () {
-      if (!this || this.length === 0) {
+      if (!this.contents || this.contents.length === 0) {
         return true
       }
   
-      if (this.length === 1 && (!this[0].url || this[0].url === 'about:blank')) {
+      if (this.contents.length === 1 && (!this.contents[0].url || this.contents[0].url === 'about:blank')) {
         return true
       }
   

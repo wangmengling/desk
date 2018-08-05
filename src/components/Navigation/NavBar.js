@@ -1,7 +1,32 @@
 import AppState from "../AppState/AppState";
+import WebView from "../WebView/WebView";
 var NavBar = {
     container: document.getElementById('tabs'),
     tabElementMap: {}, //tabId: tab element
+
+    getTab: function (tabId) {
+        return NavBar.tabElementMap[tabId]
+    },
+    setActiveTab: function (tabId) {
+        var activeTab = document.querySelector('.tab-item.active')
+
+        if (activeTab) {
+            activeTab.classList.remove('active')
+        }
+
+        var el = NavBar.getTab(tabId)
+        el.classList.add('active')
+
+        requestIdleCallback(function () {
+            requestAnimationFrame(function () {
+                el.scrollIntoView({
+                    behavior: 'smooth'
+                })
+            })
+        }, {
+                timeout: 1500
+            })
+    },
 
     add:function(tabId) {
         var tab = AppState.get(tabId)
@@ -74,13 +99,14 @@ var NavBar = {
         tabEl.appendChild(vc)
 
         // click to enter edit mode or switch to a tab
-        // tabEl.addEventListener('click', function (e) {
-        //     if (tabs.getSelected() !== data.id) { // else switch to tab if it isn't focused
-        //         switchToTab(data.id)
-        //     } else { // the tab is focused, edit tab instead
-        //         NavBar.enterEditMode(data.id)
-        //     }
-        // })
+        tabEl.addEventListener('click', function (e) {
+            // if (AppState.getSelected() !== data.id) { // else switch to tab if it isn't focused
+                switchToTab(data.id)
+                console.log(data.id)
+            // } else { // the tab is focused, edit tab instead
+            //     NavBar.enterEditMode(data.id)
+            // }
+        })
 
         // tabEl.addEventListener('auxclick', function (e) {
         //     if (e.which === 2) { // if mouse middle click -> close tab
@@ -134,5 +160,32 @@ var NavBar = {
         bookmarks.renderStar(tabId)
     },
 }
+
+function switchToTab (id, options) {
+    options = options || {}
+  
+
+    // set the tab's lastActivity to the current time
+  
+    if (AppState.getSelected()) {
+        AppState.update(AppState.getSelected(), {
+        lastActivity: Date.now()
+      })
+    }
+  
+    AppState.setSelected(id)
+    NavBar.setActiveTab(id)
+    WebView.setSelected(id)
+  
+    if (options.focusWebview !== false) {
+      WebView.get(id).focus()
+    }
+  
+    // updateColorPalette()
+  
+    // sessionRestore.save()
+  
+    // tabActivity.refresh()
+  }
 
 export default NavBar
