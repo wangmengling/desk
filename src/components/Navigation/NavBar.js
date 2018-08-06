@@ -28,13 +28,30 @@ var NavBar = {
             })
     },
 
-    add:function(tabId) {
+    add:function(tabId,title) {
         var tab = AppState.get(tabId)
+        tab.title = title
         var index = AppState.getIndex(tabId)
-        console.log(tab)
         var tabEl = NavBar.createElement(tab)
         NavBar.container.insertBefore(tabEl,NavBar.container.childNodes[index])
         NavBar.tabElementMap[tabId] = tabEl
+
+        console.log(NavBar.tabElementMap)
+        console.log(NavBar.container)
+        console.log(AppState.contents)
+        console.log(index)
+    },
+
+    addDefault:function(tabId,title) {
+        var tab = AppState.get(tabId)
+        tab.title = title
+        var index = AppState.getIndex(tabId)
+        var tabEl = NavBar.createElement(tab)
+        NavBar.tabElementMap[tabId] = tabEl
+        console.log(NavBar.tabElementMap)
+        console.log(NavBar.container)
+        console.log(AppState.contents)
+        console.log(index)
     },
 
     createElement:function(data) {

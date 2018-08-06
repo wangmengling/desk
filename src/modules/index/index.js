@@ -11,11 +11,13 @@ import "./webviews.css"
 import "./base.css"
 import AppState from "../../components/AppState/AppState";
 import WebView from "../../components/WebView/WebView";
-
+const firstNabId = "38181023441599370"
 class Index extends Component {
-    props(){
-        super.props()
+    constructor(props) {
+        super(props);
+        
     }
+    
     componentDidMount() {
         const webview = document.getElementById('foo')
         // const indicator = document.getElementById('indicator')
@@ -39,7 +41,15 @@ class Index extends Component {
             console.log(event.channel)
             this.openViews(event.channel)
         })
+
+        var url =  API.api.baseUrl + "/case/list"
+        var nav = {url:url,title:"列表"}
+        let firstBabId = AppState.add(nav)
+        NavBar.container = document.getElementById('tabs')
+        NavBar.addDefault(firstBabId)
     }
+
+    
 
     openViews(itemId) {
         // NavBar.add()
@@ -47,7 +57,8 @@ class Index extends Component {
         var nav = {url:url}
         var nabbarId = AppState.add(nav)
         NavBar.container = document.getElementById('tabs')
-        NavBar.add(nabbarId)
+        console.log(NavBar.container)
+        NavBar.add(nabbarId,"")
         console.log(NavBar.container)
         console.log(NavBar.createElement)
         WebView.container = document.getElementById('webviews'),
@@ -59,7 +70,7 @@ class Index extends Component {
             <div>
                 <div id="navbar" className="theme-background-color theme-text-color windowDragHandle" tabindex="-1">
                     <div id="tabs">
-                        <div className="tab-item fade" data-tab="38181023441599370" title="Yes+青年公寓(会展中心店)电话,地址,营业时间,人均,评价,优惠,代金券,相册--百度糯米">
+                        <div className="tab-item fade" data-tab={firstNabId} title="Yes+青年公寓(会展中心店)电话,地址,营业时间,人均,评价,优惠,代金券,相册--百度糯米">
                         
                         <div className="tab-view-contents">
                         <div className="progress-bar-container">
@@ -69,7 +80,7 @@ class Index extends Component {
                         <span className="tab-icon-area">
                         <i className="tab-close-button fa fa-times-circle"></i>
                         </span>
-                        <span className="title">Yes+青年公寓(会展中心店)电话,地址,营业时间,人均,评价,优惠,代金券,相册--百度糯米</span>
+                        <span className="title">列表</span>
                         </div>
                         </div>
                     </div>
@@ -92,7 +103,7 @@ class Index extends Component {
                     {/* <webview  src="https://www.baidu.com/" data-tab="44424510246504890" className="hidden" tabindex="-1" guestinstance="1" last-load-event="1531996614732" aria-hidden="true" nodeintegration="true"  allowpopups></webview>
                     <webview tabindex="-1"  src="http://www.ifeng.com/" data-tab="66905130000109110" className="hidden" guestinstance="2" last-load-event="1531996678324" aria-hidden="true"></webview> */}
                     {/* <webview id="foo" tabindex="-1"  src="http://localhost:4008/case" data-tab="35038458853567932" className="" guestinstance="3"  nodeintegration="true"  allowpopups></webview> */}
-                    <webview id="foo" src="http://localhost:4008/case"  tabindex="-1" nodeintegration="true" data-tab="188" allowpopups ></webview>
+                    <webview id="foo" src="http://localhost:4008/case"  tabindex="-1" nodeintegration="true" data-tab={firstNabId} allowpopups ></webview>
                     {/* <webview id="foo" tabindex="-1" src="http://localhost:4008/case/detail?caseId=5af14e4dcd6b055d3757ea0e"  nodeintegration="true" guestinstance="27" allowpopups></webview> */}
                 </div>
                 
