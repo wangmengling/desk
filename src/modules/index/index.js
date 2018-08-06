@@ -11,11 +11,13 @@ import "./webviews.css"
 import "./base.css"
 import AppState from "../../components/AppState/AppState";
 import WebView from "../../components/WebView/WebView";
-const firstNabId = "38181023441599370"
+
 class Index extends Component {
     constructor(props) {
         super(props);
-        
+        this.state = {
+            firstNabId:"38181023441599370"
+        };
     }
     
     componentDidMount() {
@@ -44,9 +46,12 @@ class Index extends Component {
 
         var url =  API.api.baseUrl + "/case/list"
         var nav = {url:url,title:"列表"}
-        let firstBabId = AppState.add(nav)
+        let firstNabId = AppState.add(nav)
+        this.setState({
+            firstNabId:firstNabId
+        })
         NavBar.container = document.getElementById('tabs')
-        NavBar.addDefault(firstBabId)
+        NavBar.addDefault(firstNabId)
     }
 
     
@@ -70,7 +75,7 @@ class Index extends Component {
             <div>
                 <div id="navbar" className="theme-background-color theme-text-color windowDragHandle" tabindex="-1">
                     <div id="tabs">
-                        <div className="tab-item fade" data-tab={firstNabId} title="Yes+青年公寓(会展中心店)电话,地址,营业时间,人均,评价,优惠,代金券,相册--百度糯米">
+                        <div className="tab-item fade" data-tab={this.state.firstNabId} title="Yes+青年公寓(会展中心店)电话,地址,营业时间,人均,评价,优惠,代金券,相册--百度糯米">
                         
                         <div className="tab-view-contents">
                         <div className="progress-bar-container">
@@ -103,7 +108,7 @@ class Index extends Component {
                     {/* <webview  src="https://www.baidu.com/" data-tab="44424510246504890" className="hidden" tabindex="-1" guestinstance="1" last-load-event="1531996614732" aria-hidden="true" nodeintegration="true"  allowpopups></webview>
                     <webview tabindex="-1"  src="http://www.ifeng.com/" data-tab="66905130000109110" className="hidden" guestinstance="2" last-load-event="1531996678324" aria-hidden="true"></webview> */}
                     {/* <webview id="foo" tabindex="-1"  src="http://localhost:4008/case" data-tab="35038458853567932" className="" guestinstance="3"  nodeintegration="true"  allowpopups></webview> */}
-                    <webview id="foo" src="http://localhost:4008/case"  tabindex="-1" nodeintegration="true" data-tab={firstNabId} allowpopups ></webview>
+                    <webview id="foo" src="http://localhost:4008/case"  tabindex="-1" nodeintegration="true" data-tab={this.state.firstNabId} allowpopups ></webview>
                     {/* <webview id="foo" tabindex="-1" src="http://localhost:4008/case/detail?caseId=5af14e4dcd6b055d3757ea0e"  nodeintegration="true" guestinstance="27" allowpopups></webview> */}
                 </div>
                 
