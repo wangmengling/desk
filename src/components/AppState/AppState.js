@@ -93,6 +93,7 @@ var AppState = {
       return -1
     },
     getSelected: function () {
+      console.log(this.contents)
       for (var i = 0; i < this.contents.length; i++) {
         if (this.contents[i].selected) {
           return this.contents[i].id
@@ -104,7 +105,6 @@ var AppState = {
       return this.contents[index] || undefined
     },
     setSelected: function (id) {
-      console.log(this.contents)
       if (!this.has(id)) {
         throw new ReferenceError('Attempted to select a tab that does not exist.')
       }
@@ -115,6 +115,7 @@ var AppState = {
           this.contents[i].selected = false
         }
       }
+      console.log(this.contents)
     },
     count: function () {
       return this.contents.length
@@ -129,7 +130,17 @@ var AppState = {
       }
   
       return false
-    }
+    },
+    destroy: function (id) {
+      for (var i = 0; i < this.contents.length; i++) {
+        if (this.contents[i].id === id) {
+          // tasks.getTaskContainingTab(id).tabHistory.push(this[i])
+          this.contents.splice(i, 1)
+          return i
+        }
+      }
+      return false
+    },
   }
   
   function getRandomId () {

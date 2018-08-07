@@ -47,8 +47,8 @@ class ListCase extends Component {
     this.props.store.list();
   }
 
-  toDetailAction(itemId){
-    ipcRenderer.sendToHost(itemId)
+  toDetailAction(item){
+    ipcRenderer.sendToHost(item)
         // webview.addEventListener('new-window', (e) => {
         //     const protocol = require('url').parse(e.url).protocol
         //     console.log(protocol)
@@ -93,7 +93,7 @@ class ListCase extends Component {
                     hoverable
                     cover={<img src={API.api.imgUrl+item.ThumbUrl} />}
                     // cover={<img alt="example" src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png" />}
-                    onClick={this.toDetailAction.bind(this,item._id)}
+                    onClick={this.toDetailAction.bind(this,item)}
                   >
                     <Meta
                       title={item.Title}

@@ -76,6 +76,10 @@ var WebView = {
         // w.setAttribute('src', urlParser.parse(options.url))
         w.setAttribute('src',options.url)
       }
+
+      if (options.tabId == 'DeskList') {
+        w.setAttribute('id',options.tabId)
+      }
   
       w.setAttribute('data-tab', options.tabId)
       w.setAttribute('nodeintegration', true)

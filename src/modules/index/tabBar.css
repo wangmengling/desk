@@ -9,7 +9,8 @@
 	position: relative;
 	outline: none;
 	z-index: 2;
-	
+	background-color: rgb(34, 34, 34);
+	color: white
 }
 
 /* window drag regions */
@@ -34,13 +35,8 @@ body.mac #navbar {
 }
 
 /* make room for the window controls */
-/* body.mac:not(.fullscreen) #navbar {
+body.mac:not(.fullscreen) #navbar {
 	padding-left: 75px;
-} */
-
-#navbar {
-	padding-left: 75px;
-	background-color: #EEEEEE;
 }
 
 body.windows #navbar {
@@ -58,8 +54,7 @@ body.windows #navbar {
 	position: absolute;
 	bottom: 0;
 	left: 0;
-	/* background: rgba(0, 0, 0, 0.075); */
-	background: #EEEEEE;
+	background: rgba(0, 0, 0, 0.075);
 }
 
 /* dark colors don't need to be darkened as much for contrast */
@@ -96,22 +91,23 @@ body:not(.windows) #menu-button {
 	flex: 1;
 	/* https://github.com/w3c/csswg-drafts/issues/92 - don't make the scrollbar height affect the layout */
 	overflow: overlay;
+	margin-left: 75px;
 }
 .tab-item {
 	flex: 1;
 	min-width: 125px;
-	max-width: 200px;
 	transition: .15s min-width, 0.2s transform;
 	line-height: 36px;
 	height: 36px;
 	overflow: hidden;
 	word-break: break-all;
 	position: relative;
-	/* border: 1px solid #FFFFFF; */
-	background-color: #FFFFFF;
+	max-width: 200px;
+	color: #AAAAAA;
 }
 .tab-item:not(.active):hover {
 	/* background-color: rgba(255, 255, 255, 0.1); */
+	color: #FFFFFF;
 }
 
 .tab-view-contents {
@@ -133,8 +129,9 @@ body:not(.windows) #menu-button {
 .tab-item.active:not(:only-child) {
 	background: rgba(0, 0, 0, 0.05);
 }
-.dark-theme .tab-item.active:not(:only-child) {
-	background: rgba(255, 255, 255, 0.2);
+.dark-theme .tab-item.active {
+	background: rgb(44, 44, 44);
+	color: #FFFFFF;
 }
 .tab-item.selected {
 	min-width: 100%;
@@ -245,7 +242,8 @@ body.dark-mode #overlay {
 	display: none;
 }
 .tab-item .tab-view-contents .title {
-	font-size: 15px;
+	font-family: Hanzipen SC;
+	font-size: 11px
 }
 
 /* buttons */
@@ -283,6 +281,7 @@ body.dark-mode #overlay {
 }
 .tab-item.jshover .tab-close-button {
 	display: inline-block;
+	padding: 0px;
 }
 
 /* hide other tabs in focus mode */

@@ -1,5 +1,6 @@
 import AppState from "../AppState/AppState";
 import WebView from "../WebView/WebView";
+import {updateColorPalette} from "./NavBarColor";
 var NavBar = {
     container: document.getElementById('tabs'),
     tabElementMap: {}, //tabId: tab element
@@ -28,35 +29,19 @@ var NavBar = {
             })
     },
 
-    add:function(tabId,title) {
+    add:function(tabId) {
         var tab = AppState.get(tabId)
-        tab.title = title
         var index = AppState.getIndex(tabId)
         var tabEl = NavBar.createElement(tab)
         NavBar.container.insertBefore(tabEl,NavBar.container.childNodes[index])
         NavBar.tabElementMap[tabId] = tabEl
-
-        console.log(NavBar.tabElementMap)
-        console.log(NavBar.container)
-        console.log(AppState.contents)
-        console.log(index)
-    },
-
-    addDefault:function(tabId,title) {
-        var tab = AppState.get(tabId)
-        tab.title = title
-        var index = AppState.getIndex(tabId)
-        var tabEl = NavBar.createElement(tab)
-        NavBar.tabElementMap[tabId] = tabEl
-        console.log(NavBar.tabElementMap)
-        console.log(NavBar.container)
-        console.log(AppState.contents)
-        console.log(index)
+        // switchToTab(tabId)
+        
     },
 
     createElement:function(data) {
-        var tabTitle = data.title || 'newTabLabel'
-
+        var tabTitle = data.title || '加载中...'
+        console.log(data)
         var tabEl = document.createElement('div')
         tabEl.className = 'tab-item'
         tabEl.setAttribute('data-tab', data.id)
@@ -94,8 +79,8 @@ var NavBar = {
         closeTabButton.classList.add('fa-times-circle')
 
         closeTabButton.addEventListener('click', function (e) {
-            // closeTab(data.id)
-
+            closeTab(data.id)
+            
             // prevent the searchbar from being opened
             e.stopPropagation()
         })
@@ -117,12 +102,7 @@ var NavBar = {
 
         // click to enter edit mode or switch to a tab
         tabEl.addEventListener('click', function (e) {
-            // if (AppState.getSelected() !== data.id) { // else switch to tab if it isn't focused
-                switchToTab(data.id)
-                console.log(data.id)
-            // } else { // the tab is focused, edit tab instead
-            //     NavBar.enterEditMode(data.id)
-            // }
+            switchToTab(data.id)
         })
 
         // tabEl.addEventListener('auxclick', function (e) {
@@ -152,6 +132,18 @@ var NavBar = {
 
         return tabEl
     },
+
+    removeTab: function (tabId) {
+        var tabEl = NavBar.getTab(tabId)
+        if (tabEl) {
+            // The tab does not have a coresponding .tab-item element.
+            // This happens when destroying tabs from other task where this .tab-item is not present
+            NavBar.container.removeChild(tabEl)
+            delete NavBar.tabElementMap[tabId]
+        }
+    },
+
+
     rerenderTab: function (tabId) {
         var tabEl = NavBar.getTab(tabId)
         var tabData = AppState.get(tabId)
@@ -177,6 +169,8 @@ var NavBar = {
         bookmarks.renderStar(tabId)
     },
 }
+export default NavBar
+
 
 function switchToTab (id, options) {
     options = options || {}
@@ -205,4 +199,32 @@ function switchToTab (id, options) {
     // tabActivity.refresh()
   }
 
-export default NavBar
+  function closeTab (tabId) {
+    /* disabled in focus mode */
+    // if (isFocusMode) {
+    //   showFocusModeError()
+    //   return
+    // }
+  console.log(tabId)
+  console.log(AppState.getSelected())
+    if (tabId === AppState.getSelected()) {
+      var currentIndex = AppState.getIndex(AppState.getSelected())
+      var nextTab = AppState.getAtIndex(currentIndex - 1) || AppState.getAtIndex(currentIndex + 1)
+      console.log(nextTab)
+      destroyTab(tabId)
+        if (nextTab) {
+            switchToTab(nextTab.id)
+        } else {
+            // addTab()
+        }
+    } else {
+      destroyTab(tabId)
+    }
+  }
+
+  /* destroys the webview and tab element for a tab */
+function destroyTab (id) {
+    NavBar.removeTab(id)
+    AppState.destroy(id) // remove from state - returns the index of the destroyed tab
+    WebView.destroy(id) // remove the webview
+}
