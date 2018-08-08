@@ -1,7 +1,9 @@
 .CategoryList {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 .category {
     margin-right: 10px;
+    margin-bottom: 10px;
 }

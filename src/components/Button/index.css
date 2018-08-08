@@ -9,6 +9,8 @@ webkit, opera, IE9
     padding-left: 22px;
     padding-right: 22px;
     cursor: pointer;
+    display: flex;
+    align-items: center;
 }
 
 .sonnetButtonText {
@@ -24,7 +26,8 @@ webkit, opera, IE9
     padding-left: 22px;
     padding-right: 22px;
     cursor: pointer;
-    
+    display: flex;
+    align-items: center;
 }
 
 .sonnetButtonTextSelect {

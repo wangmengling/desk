@@ -69,27 +69,26 @@ var NavBar = {
         pbContainer.appendChild(pb)
 
         // icons
+        //close button
+        if (data.id !== "DeskList") {
+            var iconArea = document.createElement('span')
+            iconArea.className = 'tab-icon-area'
+            var closeTabButton = document.createElement('i')
+            closeTabButton.classList.add('tab-close-button')
+            closeTabButton.classList.add('fa')
+            closeTabButton.classList.add('fa-times-circle')
 
-        var iconArea = document.createElement('span')
-        iconArea.className = 'tab-icon-area'
+            closeTabButton.addEventListener('click', function (e) {
+                closeTab(data.id)
+                
+                // prevent the searchbar from being opened
+                e.stopPropagation()
+            })
 
-        var closeTabButton = document.createElement('i')
-        closeTabButton.classList.add('tab-close-button')
-        closeTabButton.classList.add('fa')
-        closeTabButton.classList.add('fa-times-circle')
-
-        closeTabButton.addEventListener('click', function (e) {
-            closeTab(data.id)
-            
-            // prevent the searchbar from being opened
-            e.stopPropagation()
-        })
-
-        iconArea.appendChild(closeTabButton)
-
-
-        vc.appendChild(iconArea)
-
+            iconArea.appendChild(closeTabButton)
+            vc.appendChild(iconArea)
+        }
+        
         // title
 
         var title = document.createElement('span')
@@ -105,11 +104,11 @@ var NavBar = {
             switchToTab(data.id)
         })
 
-        // tabEl.addEventListener('auxclick', function (e) {
-        //     if (e.which === 2) { // if mouse middle click -> close tab
-        //         // closeTab(data.id)
-        //     }
-        // })
+        tabEl.addEventListener('auxclick', function (e) {
+            if (e.which === 2) { // if mouse middle click -> close tab
+                closeTab(data.id)
+            }
+        })
 
         // tabEl.addEventListener('mousewheel', function (e) {
         //     if (e.deltaY > 65 && e.deltaX < 10 && Date.now() - lastTabDeletion > 650) { // swipe up to delete tabs
@@ -205,8 +204,6 @@ function switchToTab (id, options) {
     //   showFocusModeError()
     //   return
     // }
-  console.log(tabId)
-  console.log(AppState.getSelected())
     if (tabId === AppState.getSelected()) {
       var currentIndex = AppState.getIndex(AppState.getSelected())
       var nextTab = AppState.getAtIndex(currentIndex - 1) || AppState.getAtIndex(currentIndex + 1)
@@ -219,6 +216,7 @@ function switchToTab (id, options) {
         }
     } else {
       destroyTab(tabId)
+       NavBar.setActiveTab(AppState.getSelected()) //+
     }
   }
 

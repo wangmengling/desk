@@ -49,15 +49,6 @@ class ListCase extends Component {
 
   toDetailAction(item){
     ipcRenderer.sendToHost(item)
-        // webview.addEventListener('new-window', (e) => {
-        //     const protocol = require('url').parse(e.url).protocol
-        //     console.log(protocol)
-        //     if (protocol === 'http:' || protocol === 'https:') {
-        //         //shell.openExternal(e.url)
-        //         window.open(e.url)
-                
-        //     }
-        // });
   }
 
   render() {
@@ -65,7 +56,6 @@ class ListCase extends Component {
       <div className="CaseList">
         <div className="CaseFilter">
           <Filter />
-          {/* 大发送到发 */}
         </div>
         <div className="CaseContent">
         <InfiniteScroll
@@ -79,28 +69,17 @@ class ListCase extends Component {
           <List
             grid={{ gutter: 16, column: 3 }}
             dataSource={this.props.store.dataList}
-            // dataSource={data}
             renderItem={item => (
               <List.Item>
-                {/* <Link 
-                to={{
-                  pathname: '/case/detail',
-                  search: `?caseId=${item._id}`,
-                  // hash: '#the-hash',
-                  state: { caseId: item._id }
-                }}> */}
                   <Card
                     hoverable
                     cover={<img src={API.api.imgUrl+item.ThumbUrl} />}
-                    // cover={<img alt="example" src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png" />}
                     onClick={this.toDetailAction.bind(this,item)}
                   >
                     <Meta
                       title={item.Title}
-                    // description="www.instagram.com" 
                     ></Meta>
                   </Card>
-                {/* </Link> */}
               </List.Item>
             )}
           >

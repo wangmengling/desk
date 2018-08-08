@@ -9,6 +9,12 @@ module.exports = {
         case: {
             list: `${APIV1}/case/list`,
             detailById: `${APIV1}/case/detail`
+        },
+        color: {
+            list: `${APIV1}/color/list`
+        },
+        style: {
+            list: `${APIV1}/style/list`
         }
     }
 }

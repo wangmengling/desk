@@ -58,6 +58,38 @@ class BaseStore {
         });
     }
 
+    @action allList(url) {
+        this.loading = true;
+        Fetch.post(url,this.searchParams).then((response) => {
+            let data = response.data;
+            if (data.code == 1 && data.data) {
+                this.dataList = data.data["list"];
+            }
+            this.loading = false;
+        }).catch((error) => {
+            this.loading = false;
+            message.info(error.message);
+        });
+    }
+
+    @action allList(url,callback) {
+        this.loading = true;
+        Fetch.post(url,this.searchParams).then((response) => {
+            console.log(response)
+            let data = response.data;
+            if (data.code == 1 && data.data) {
+                callback(data.data["list"],null)
+            }else {
+                callback(null,error)
+            }
+            this.loading = false;
+        }).catch((error) => {
+            console.log(error)
+            this.loading = false;
+            callback(null,error)
+        });
+    }
+
     @action add(url, params) {
         this.addLoading = true;
         Fetch.post(url,params).then((response) => {
