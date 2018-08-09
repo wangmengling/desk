@@ -84,6 +84,7 @@ var WebView = {
       w.setAttribute('data-tab', options.tabId)
       w.setAttribute('nodeintegration', true)
       // webview events
+      // w.setAttribute('autosize')
   
       WebView.events.forEach(function (ev) {
         if (ev.useWebContents) { // some events (such as context-menu) are only available on the webContents rather than the webview element

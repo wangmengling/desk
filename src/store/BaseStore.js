@@ -25,9 +25,10 @@ class BaseStore {
 
     @action list(url) {
         this.loading = true;
-        // console.log(this.searchParams);
         this.searchParams["pageIndex"] = this.pageIndex;
         this.searchParams["pageSize"] = this.pageSize;
+        console.log(this.searchParams);
+        console.log("-----------------");
         Fetch.post(url,this.searchParams).then((response) => {
             let data = response.data;
             // console.log(data);
@@ -75,18 +76,16 @@ class BaseStore {
     @action allList(url,callback) {
         this.loading = true;
         Fetch.post(url,this.searchParams).then((response) => {
-            console.log(response)
             let data = response.data;
             if (data.code == 1 && data.data) {
                 callback(data.data["list"],null)
             }else {
-                callback(null,error)
+                callback([],error)
             }
             this.loading = false;
         }).catch((error) => {
-            console.log(error)
             this.loading = false;
-            callback(null,error)
+            callback([],error)
         });
     }
 

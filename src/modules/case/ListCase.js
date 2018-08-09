@@ -24,6 +24,7 @@ class ListCase extends Component {
     this.props.store.pageSize = 10;
     this.props.store.pageIndex = 0;
     // this.toDetailAction = this.toDetailAction.bind(this)
+    this.filterAction = this.filterAction.bind(this);
   }
 
   componentWillMount() {
@@ -51,11 +52,22 @@ class ListCase extends Component {
     ipcRenderer.sendToHost(item)
   }
 
+  filterAction(isSelect,selectIndex,value,type) {
+    console.log(selectIndex,value,type)
+    if (isSelect == true) {
+      this.props.store.searchParams[type] = value
+    }else {
+      this.props.store.searchParams[type] = ""
+    }
+    this.props.store.pageIndex = 0
+    this.props.store.list()
+  }
+
   render() {
     return (
       <div className="CaseList">
         <div className="CaseFilter">
-          <Filter />
+          <Filter onClick={this.filterAction}/>
         </div>
         <div className="CaseContent">
         <InfiniteScroll

@@ -80,17 +80,16 @@ class CaseDetail extends Component {
         
         return (
             <div className="CaseDetail">
-            asdfasdfasdf
                 {/* <Card className="CaseDetailCardImage" bordered={false} style={{ width: '100%' }}>
                     <List
                         grid={{ gutter: 16, column: 3 }}
-                        dataSource={detailData.ImageUrl}
+                        dataSource={imageArray}
                         renderItem={(item,index )=> (
                             <List.Item>
                                 <Card
                                     hoverable
                                     bodyStyle={{ padding: '0px' }}
-                                cover={<img src={API.api.imgUrl + item} />}
+                                cover={<img src={API.api.imgUrl + item[0]["src"]} />}
                                 onClick={() => this.setState({ isOpen: true,photoIndex:index })}
                                 >
                                 </Card>
@@ -101,11 +100,9 @@ class CaseDetail extends Component {
                 <Gallery 
                 onClick={this.openLightbox}
                 photos={imageArray} 
-                columns={3} 
+                columns={2} 
                 />
                 {isOpen && (
-                    
-                    
                     <Lightbox
                         mainSrc={API.api.imgUrl + detailData.ImageUrl[photoIndex][0]["src"]}
                         nextSrc={API.api.imgUrl + detailData.ImageUrl[(photoIndex + 1) % detailData.ImageUrl.length][0]["src"]}
@@ -122,9 +119,8 @@ class CaseDetail extends Component {
                             })
                         }
                     />
-                    
                 )}
-            </div>
+            </div> 
         )
     }
 }

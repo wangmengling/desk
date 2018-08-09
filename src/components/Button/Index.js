@@ -24,7 +24,7 @@ class Button extends Component {
             isSelect: !this.state.isSelect 
         }, () => {
             if (this.props.onClick) {
-                this.props.onClick(this.state.isSelect,this.props.number);
+                this.props.onClick(this.state.isSelect,this.props.number,this.props.value);
             }
         });
     }

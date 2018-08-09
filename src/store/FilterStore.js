@@ -12,20 +12,19 @@ class FilterStore  extends BaseStore{
     }
 
     @action colorFetchList() {
-        this.loading = true;
+        let that = this
         super.allList(API.api.color.list,function (data,err) {
-            console.log(data)
-            if (data.count) {
-                this.colorList = data
+            if (data.length > 0) {
+                that.colorList = data
             }
         })
     }
 
     @action styleFetchList() {
+        let that = this
         super.allList(API.api.style.list,function (data,err) {
-            console.log(data)
-            if (data.count) {
-                this.styleList = data
+            if (data.length > 0) {
+                that.styleList = data
             }
         })
     }

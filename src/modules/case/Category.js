@@ -13,21 +13,22 @@ class Category extends Component {
             selectIndex:0,
             isSelect:false
         };
-        
     }
 
     componentWillMount() {
         this.setState({
             value:this.props.values
+        },()=>{
+            
         });
     }
     
-    selectAction(isSelect,selectIndex) {
+    selectAction(isSelect,selectIndex,value) {
         this.setState({
             selectIndex:selectIndex,
             isSelect:isSelect,
         },()=>{
-            
+            this.props.onClick(isSelect,selectIndex,value,this.props.type)
         })
     }
 
@@ -54,7 +55,9 @@ class Category extends Component {
 }
 
 Category.PropTypes = {
-    values: PropTypes.array
+    values: PropTypes.arrayOf(PropTypes.string),
+    type: PropTypes.string,
+    onClick: PropTypes.func
 }
 
 export default Category;
