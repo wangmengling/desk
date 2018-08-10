@@ -50,6 +50,7 @@ class ListCase extends Component {
 
   toDetailAction(item){
     ipcRenderer.sendToHost(item)
+    // ipcRenderer.sendToHost('detailData', item.Id)
   }
 
   filterAction(isSelect,selectIndex,value,type) {

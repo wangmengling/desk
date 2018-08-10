@@ -40,9 +40,8 @@ class Index extends Component {
             webview.openDevTools()
         })
         webview.addEventListener('ipc-message', (event) => {
-            console.log(event.channel)
             var url =  API.api.baseUrl + "/case/detail?caseId=" + event.channel._id
-            var nav = {url:url,title:event.channel.Title}
+            var nav = {url:url,title:event.channel.Title,detailId:event.channel._id}
             this.openViews(nav)
         })
     }

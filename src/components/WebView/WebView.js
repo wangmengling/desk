@@ -100,7 +100,12 @@ var WebView = {
   
       w.addEventListener('did-navigate-in-page', onPageLoad)
       w.addEventListener('did-finish-load', () => {
-        w.send('detailData', 'whoooooooh!')
+        console.log(options)
+        w.send('detailData', options.detailId)
+      })
+
+      w.addEventListener('dom-ready', () => {
+        w.openDevTools()
       })
   
       w.addEventListener('close', function (e) {
@@ -123,10 +128,12 @@ var WebView = {
     },
     add: function (tabId) {
       var tabData = AppState.get(tabId)
-  
+      console.log(tabData);
+      
       var webviewDom = WebView.getDOM({
         tabId: tabId,
-        url: tabData.url
+        url: tabData.url,
+        detailId: tabData.detailId
       })
   
       WebView.elementMap[tabId] = webviewDom

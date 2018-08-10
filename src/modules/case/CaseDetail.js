@@ -10,6 +10,7 @@ import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
 const {ipcRenderer}  = window.require("electron")
 import Gallery from 'react-photo-gallery';
+import ReactPlayer from 'react-player'
 
 const images = [
     'http://img.blog.csdn.net/20171219205022816?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc29uZzI3OTgxMTc5OQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast',
@@ -34,16 +35,14 @@ class CaseDetail extends Component {
         // this.props.store.detail();
         // console.log(this.props.location.state)
         ipcRenderer.on('detailData', (event,message) => {
-            console.log("==")
-            console.log(message)
-            console.log("==")
             // ipcRenderer.sendToHost('pong')
+            // var { caseId } = this.props.location.state;
+            
+            CaseStore.detailById(API.api.case.detailById, message);
         })
         console.log(this.props)
         
-        // var { caseId } = this.props.location.state;
-        var caseId = "5af14e4dcd6b055d3757ea0e"
-        CaseStore.detailById(API.api.case.detailById, caseId);
+        
     }
 
     openLightbox(event, obj) {
@@ -57,8 +56,8 @@ class CaseDetail extends Component {
     render() {
         var detailData = CaseStore.detailData;
         let time = "";
-        if (detailData.time) {
-            time = (new Date(parseInt(detailData.time))).toLocaleString();
+        if (detailData.CreateTime) {
+            time = (new Date(parseInt(detailData.CreateTime))).toLocaleString();
         }
         const { photoIndex, isOpen } = this.state;
         let imageArray = []
@@ -97,29 +96,51 @@ class CaseDetail extends Component {
                         )}
                     />
                 </Card> */}
-                <Gallery 
-                onClick={this.openLightbox}
-                photos={imageArray} 
-                columns={2} 
-                />
-                {isOpen && (
-                    <Lightbox
-                        mainSrc={API.api.imgUrl + detailData.ImageUrl[photoIndex][0]["src"]}
-                        nextSrc={API.api.imgUrl + detailData.ImageUrl[(photoIndex + 1) % detailData.ImageUrl.length][0]["src"]}
-                        prevSrc={API.api.imgUrl + detailData.ImageUrl[(photoIndex + detailData.ImageUrl.length - 1) % detailData.ImageUrl.length][0]["src"]}
-                        onCloseRequest={() => this.setState({ isOpen: false })}
-                        onMovePrevRequest={() =>
-                            this.setState({
-                                photoIndex: (photoIndex + detailData.ImageUrl.length - 1) % detailData.ImageUrl.length,
-                            })
-                        }
-                        onMoveNextRequest={() =>
-                            this.setState({
-                                photoIndex: (photoIndex + 1) % detailData.ImageUrl.length,
-                            })
-                        }
+                <div className="detailTop">
+                    <div className="detailTitle">
+                        {detailData.Title}
+                    </div>
+                    <div className="detailTimeAndAddress">
+                        <div className="detailTime">
+                            婚礼日期:{time}
+                        </div>
+                        <div className="detailAddress">
+                            婚礼地点:{detailData.Address}
+                        </div>
+                    </div>
+                    <div className="detailDescription">
+                        {detailData.Description}
+                    </div>
+                </div>
+                <div className="detailVideo">
+                    <ReactPlayer url='https://www.youtube.com/watch?v=d46Azg3Pm4c' playing />,
+                </div>
+                <div className="detialGallery">
+                    <Gallery 
+                    onClick={this.openLightbox}
+                    photos={imageArray} 
+                    columns={4} 
                     />
-                )}
+                    {isOpen && (
+                        <Lightbox
+                            mainSrc={API.api.imgUrl + detailData.ImageUrl[photoIndex][0]["src"]}
+                            nextSrc={API.api.imgUrl + detailData.ImageUrl[(photoIndex + 1) % detailData.ImageUrl.length][0]["src"]}
+                            prevSrc={API.api.imgUrl + detailData.ImageUrl[(photoIndex + detailData.ImageUrl.length - 1) % detailData.ImageUrl.length][0]["src"]}
+                            onCloseRequest={() => this.setState({ isOpen: false })}
+                            onMovePrevRequest={() =>
+                                this.setState({
+                                    photoIndex: (photoIndex + detailData.ImageUrl.length - 1) % detailData.ImageUrl.length,
+                                })
+                            }
+                            onMoveNextRequest={() =>
+                                this.setState({
+                                    photoIndex: (photoIndex + 1) % detailData.ImageUrl.length,
+                                })
+                            }
+                        />
+                    )}
+                </div>
+                
             </div> 
         )
     }

@@ -13,14 +13,15 @@ var AppState = {
         title: tab.title || '',
         id: tabId,
         lastActivity: tab.lastActivity || Date.now(),
+        detailId: tab.detailId || "",
         secure: tab.secure,
         private: tab.private || false,
         readerable: tab.readerable || false,
         backgroundColor: tab.backgroundColor,
         foregroundColor: tab.foregroundColor,
         selected: tab.selected || false
+        
       }
-  
       if (index) {
         this.contents.splice(index, 0, newTab)
       } else {
