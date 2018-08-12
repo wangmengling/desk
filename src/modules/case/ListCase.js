@@ -3,7 +3,7 @@ import Filter from "./Filter";
 import { withRouter, Link } from "react-router-dom";
 import InfiniteScroll from 'react-infinite-scroller';
 import "./ListCase.less";
-import {  List, Card } from 'antd';
+import {  List, Card, Spin, message } from 'antd';
 import { Meta } from "antd/lib/list/Item";
 import CaseBlock from "./CaseBlock";
 import { observer } from "mobx-react";
@@ -38,6 +38,10 @@ class ListCase extends Component {
   handleInfiniteOnLoad = () => {
     let data = this.props.store.dataList;
     // this.props.store.loading = true;
+    console.log("111111111111")
+    console.log(data.length)
+    console.log(this.props.store.count)
+    console.log("111111111111")
     if (data.length >= this.props.store.count) {
       message.warning('Infinite List loaded all');
       this.props.store.hasMore = false;
@@ -65,20 +69,25 @@ class ListCase extends Component {
   }
 
   render() {
+    var loadView = "";
+      if (this.props.store.loading == true && this.props.store.hasMore == true) {
+        loadView =<Spin className="demo-loading" />;
+      }else {
+        loadView = "";
+      }
     return (
-      <div className="CaseList">
+      <div className="CaseList" >
+        <InfiniteScroll
+        pageStart={0}
+        loadMore={this.handleInfiniteOnLoad}
+        hasMore={!this.props.store.loading && this.props.store.hasMore}
+        loader={<div className="loader" key={0}>Loading ...</div>}
+        useWindow={false}
+        >
         <div className="CaseFilter">
           <Filter onClick={this.filterAction}/>
         </div>
         <div className="CaseContent">
-        <InfiniteScroll
-          initialLoad={false}
-          pageStart={0}
-          loadMore={this.handleInfiniteOnLoad}
-          // hasMore={!this.props.store.loading && this.props.store.hasMore}
-          useWindow={false}
-          className="CaseScrollView"
-        >
           <List
             grid={{ gutter: 16, column: 3 }}
             dataSource={this.props.store.dataList}
@@ -97,9 +106,9 @@ class ListCase extends Component {
             )}
           >
           </List>
+          </div>
+        {loadView}
         </InfiniteScroll>
-        </div>
-        
       </div>
     )
   }

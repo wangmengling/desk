@@ -8,6 +8,7 @@ class BaseStore {
     @observable pageCount = 0;
     @observable pageIsMoreData = false;
     @observable count = 0;
+    @observable pageSize = 10;
 
 
     /**

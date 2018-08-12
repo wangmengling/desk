@@ -18,7 +18,11 @@ const images = [
     'http://img.blog.csdn.net/20171219205022816?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc29uZzI3OTgxMTc5OQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast',
     'http://img.blog.csdn.net/20171219205022816?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc29uZzI3OTgxMTc5OQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast',
 ];
-
+const customStyles = {
+    // content : {
+        backgroundColor            : '#fff'
+    // }
+  };
 @observer
 class CaseDetail extends Component {
     constructor(props, context) {
@@ -71,8 +75,6 @@ class CaseDetail extends Component {
                     height:element[0]["width"],
                     width:element[0]["height"]
                 }
-                // console.log(image);
-                
                 imageArray.push(image)
             });
         }
@@ -102,10 +104,10 @@ class CaseDetail extends Component {
                     </div>
                     <div className="detailTimeAndAddress">
                         <div className="detailTime">
-                            婚礼日期:{time}
+                            婚礼日期：{time}
                         </div>
                         <div className="detailAddress">
-                            婚礼地点:{detailData.Address}
+                            婚礼地点：{detailData.Address}
                         </div>
                     </div>
                     <div className="detailDescription">
@@ -113,7 +115,7 @@ class CaseDetail extends Component {
                     </div>
                 </div>
                 <div className="detailVideo">
-                    <ReactPlayer url='https://www.youtube.com/watch?v=d46Azg3Pm4c' playing />,
+                    <ReactPlayer url={API.api.imgUrl + detailData.VideoUrl} playing />,
                 </div>
                 <div className="detialGallery">
                     <Gallery 
@@ -132,6 +134,7 @@ class CaseDetail extends Component {
                                     photoIndex: (photoIndex + detailData.ImageUrl.length - 1) % detailData.ImageUrl.length,
                                 })
                             }
+                            imageStyle={customStyles}
                             onMoveNextRequest={() =>
                                 this.setState({
                                     photoIndex: (photoIndex + 1) % detailData.ImageUrl.length,
