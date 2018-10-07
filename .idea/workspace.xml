@@ -1,7 +1,197 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d86d7e3b-d008-4869-90f9-4ff238b42cb0" name="Default Changelist" comment="" />
+    <list default="true" id="d86d7e3b-d008-4869-90f9-4ff238b42cb0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/API.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/API.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/desk-darwin-x64/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/desk-darwin-x64/LICENSES.chromium.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/desk-darwin-x64/version" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/builder-effective-config.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Electron Framework.framework/Electron Framework" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Electron Framework.framework/Libraries" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Electron Framework.framework/Resources" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Electron Framework" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Libraries/libffmpeg.dylib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Libraries/libnode.dylib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/Info.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/MainMenu.nib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/am.lproj/locale.pak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ar.lproj/locale.pak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/bg.lproj/locale.pak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/bn.lproj/locale.pak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ca.lproj/locale.pak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/content_shell.pak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/crashpad_handler" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/cs.lproj/locale.pak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/da.lproj/locale.pak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/de.lproj/locale.pak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/el.lproj/locale.pak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/en.lproj/locale.pak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/en_GB.lproj/locale.pak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/es.lproj/locale.pak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/es_419.lproj/locale.pak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/et.lproj/locale.pak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/fa.lproj/locale.pak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/fi.lproj/locale.pak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/fil.lproj/locale.pak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/fr.lproj/locale.pak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/gu.lproj/locale.pak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/he.lproj/locale.pak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/hi.lproj/locale.pak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/hr.lproj/locale.pak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/hu.lproj/locale.pak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/icudtl.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/id.lproj/locale.pak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/it.lproj/locale.pak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ja.lproj/locale.pak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/kn.lproj/locale.pak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ko.lproj/locale.pak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/lt.lproj/locale.pak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/lv.lproj/locale.pak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ml.lproj/locale.pak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/mr.lproj/locale.pak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ms.lproj/locale.pak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/natives_blob.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/nb.lproj/locale.pak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/nl.lproj/locale.pak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/pdf_viewer_resources.pak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/pl.lproj/locale.pak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/pt_BR.lproj/locale.pak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/pt_PT.lproj/locale.pak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ro.lproj/locale.pak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ru.lproj/locale.pak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/sk.lproj/locale.pak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/sl.lproj/locale.pak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/snapshot_blob.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/sr.lproj/locale.pak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/sv.lproj/locale.pak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/sw.lproj/locale.pak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ta.lproj/locale.pak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/te.lproj/locale.pak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/th.lproj/locale.pak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/tr.lproj/locale.pak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/uk.lproj/locale.pak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/vi.lproj/locale.pak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/zh_CN.lproj/locale.pak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/zh_TW.lproj/locale.pak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Electron Framework.framework/Versions/Current" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Mantle.framework/Headers" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Mantle.framework/Mantle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Mantle.framework/Modules" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Mantle.framework/Resources" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Mantle.framework/Versions/A/Headers/MTLJSONAdapter.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Mantle.framework/Versions/A/Headers/MTLManagedObjectAdapter.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Mantle.framework/Versions/A/Headers/MTLModel+NSCoding.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Mantle.framework/Versions/A/Headers/MTLModel.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Mantle.framework/Versions/A/Headers/MTLValueTransformer.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Mantle.framework/Versions/A/Headers/Mantle.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Mantle.framework/Versions/A/Headers/NSArray+MTLManipulationAdditions.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Mantle.framework/Versions/A/Headers/NSDictionary+MTLManipulationAdditions.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Mantle.framework/Versions/A/Headers/NSObject+MTLComparisonAdditions.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Mantle.framework/Versions/A/Headers/NSValueTransformer+MTLInversionAdditions.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Mantle.framework/Versions/A/Headers/NSValueTransformer+MTLPredefinedTransformerAdditions.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Mantle.framework/Versions/A/Mantle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Mantle.framework/Versions/A/Modules/module.modulemap" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Mantle.framework/Versions/A/Resources/Info.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Mantle.framework/Versions/Current" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/ReactiveCocoa.framework/Headers" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/ReactiveCocoa.framework/Modules" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/ReactiveCocoa.framework/ReactiveCocoa" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/ReactiveCocoa.framework/Resources" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/EXTKeyPathCoding.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/EXTScope.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/NSArray+RACSequenceAdditions.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/NSControl+RACCommandSupport.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/NSControl+RACTextSignalSupport.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/NSData+RACSupport.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/NSDictionary+RACSequenceAdditions.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/NSEnumerator+RACSequenceAdditions.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/NSFileHandle+RACSupport.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/NSIndexSet+RACSequenceAdditions.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/NSNotificationCenter+RACSupport.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/NSObject+RACAppKitBindings.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/NSObject+RACDeallocating.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/NSObject+RACLifting.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/NSObject+RACPropertySubscribing.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/NSObject+RACSelectorSignal.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/NSOrderedSet+RACSequenceAdditions.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/NSSet+RACSequenceAdditions.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/NSString+RACSequenceAdditions.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/NSString+RACSupport.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/NSText+RACSignalSupport.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/NSURLConnection+RACSupport.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/NSUserDefaults+RACSupport.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/RACBacktrace.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/RACBehaviorSubject.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/RACChannel.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/RACCommand.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/RACCompoundDisposable.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/RACDisposable.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/RACEvent.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/RACGroupedSignal.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/RACKVOChannel.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/RACMulticastConnection.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/RACQueueScheduler+Subclass.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/RACQueueScheduler.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/RACReplaySubject.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/RACScheduler+Subclass.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/RACScheduler.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/RACScopedDisposable.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/RACSequence.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/RACSerialDisposable.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/RACSignal+Operations.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/RACSignal.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/RACStream.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/RACSubject.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/RACSubscriber.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/RACSubscriptingAssignmentTrampoline.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/RACTargetQueueScheduler.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/RACTestScheduler.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/RACTuple.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/RACUnit.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/ReactiveCocoa.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Headers/metamacros.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Modules/module.modulemap" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/ReactiveCocoa" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/A/Resources/Info.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/ReactiveCocoa.framework/Versions/Current" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Squirrel.framework/Headers" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Squirrel.framework/Modules" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Squirrel.framework/Resources" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Squirrel.framework/Squirrel" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Squirrel.framework/Versions/A/Headers/NSBundle+SQRLVersionExtensions.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Squirrel.framework/Versions/A/Headers/NSProcessInfo+SQRLVersionExtensions.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Squirrel.framework/Versions/A/Headers/SQRLDownloadedUpdate.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Squirrel.framework/Versions/A/Headers/SQRLUpdate.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Squirrel.framework/Versions/A/Headers/SQRLUpdater.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Squirrel.framework/Versions/A/Headers/Squirrel.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Squirrel.framework/Versions/A/Modules/module.modulemap" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Squirrel.framework/Versions/A/Resources/Info.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Squirrel.framework/Versions/A/Resources/ShipIt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Squirrel.framework/Versions/A/Squirrel" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/Squirrel.framework/Versions/Current" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/小城大事 Helper EH.app/Contents/Info.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/小城大事 Helper EH.app/Contents/MacOS/小城大事 Helper EH" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/小城大事 Helper EH.app/Contents/PkgInfo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/小城大事 Helper NP.app/Contents/Info.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/小城大事 Helper NP.app/Contents/MacOS/小城大事 Helper NP" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/小城大事 Helper NP.app/Contents/PkgInfo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/小城大事 Helper.app/Contents/Info.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/小城大事 Helper.app/Contents/MacOS/小城大事 Helper" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Frameworks/小城大事 Helper.app/Contents/PkgInfo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Info.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/MacOS/小城大事" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/PkgInfo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Resources/app.asar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Resources/electron.asar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Resources/electron.icns" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/case/CaseDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/case/CaseDetail.js" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -16,38 +206,131 @@
       <usages-collector id="statistics.lifecycle.project">
         <counts>
           <entry key="project.closed" value="1" />
+          <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.3" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="js" value="2" />
+          <entry key="js" value="9" />
+          <entry key="json" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JavaScript" value="2" />
+          <entry key="JSON" value="1" />
+          <entry key="JavaScript" value="9" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.js.language.service.starts">
+        <counts>
+          <entry key="ESLintLanguageService" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="js" value="30" />
+          <entry key="json" value="7" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JSON" value="7" />
+          <entry key="JavaScript" value="30" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.js">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-389">
+              <caret line="53" selection-start-line="53" selection-end-line="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="415">
+              <caret line="105" column="3" selection-start-line="105" selection-start-column="3" selection-end-line="105" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/API.config.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="30" selection-start-column="30" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/modules/case/CaseDetail.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="344">
+              <caret line="74" column="45" selection-start-line="74" selection-start-column="45" selection-end-line="74" selection-end-column="45" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Desktop/API.config.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Desktop/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$USER_HOME$/Desktop/API.config.js" />
+        <option value="$PROJECT_DIR$/config/index.js" />
+        <option value="$PROJECT_DIR$/main.js" />
+        <option value="$PROJECT_DIR$/src/modules/case/CaseDetail.js" />
+        <option value="$PROJECT_DIR$/config/API.config.js" />
+        <option value="$PROJECT_DIR$/package.json" />
+      </list>
+    </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER">
@@ -57,15 +340,18 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/node_modules" />
+  </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths>
+      <path value="$PROJECT_DIR$/dist/mac/小城大事.app/Contents/Resources/app.asar.unpacked/node_modules/term-size/package.json" />
       <path value="$PROJECT_DIR$/package.json" />
       <path value="$PROJECT_DIR$/public/ext/readability-master/package.json" />
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="31" />
-    <option name="y" value="43" />
+    <option name="y" value="29" />
     <option name="width" value="1629" />
     <option name="height" value="937" />
   </component>
@@ -80,6 +366,29 @@
             <path>
               <item name="sonnetDesk" type="b2602c69:ProjectViewProjectNode" />
               <item name="sonnetDesk" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sonnetDesk" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sonnetDesk" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sonnetDesk" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sonnetDesk" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sonnetDesk" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sonnetDesk" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sonnetDesk" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sonnetDesk" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="case" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -119,31 +428,32 @@
       <option name="presentableId" value="Default" />
       <updated>1534499047416</updated>
       <workItem from="1534499049994" duration="736000" />
+      <workItem from="1538891483761" duration="2021000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="736000" />
+    <option name="totallyTimeSpent" value="2757000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="31" y="43" width="1629" height="937" extended-state="0" />
+    <frame x="22" y="290" width="1629" height="937" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="npm" side_tool="true" />
-      <window_info id="Favorites" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21393035" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="npm" order="2" side_tool="true" />
+      <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3289941" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -159,8 +469,57 @@
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$USER_HOME$/Desktop/API.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.js">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-389">
+          <caret line="53" selection-start-line="53" selection-end-line="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/modules/case/CaseDetail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="74" column="45" selection-start-line="74" selection-start-column="45" selection-end-line="74" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/API.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="30" selection-start-column="30" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="415">
+          <caret line="105" column="3" selection-start-line="105" selection-start-column="3" selection-end-line="105" selection-end-column="3" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>

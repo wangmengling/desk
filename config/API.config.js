@@ -1,5 +1,6 @@
-const BaseUrl = "http://localhost:4008";
-const ApiUrl = "http://localhost:3002";
+import config from './config';
+const BaseUrl = config.server.host + config.server.port;
+const ApiUrl = config.server.apiHost + config.server.apiPort;
 const APIV1 = `${ApiUrl}`;
 module.exports = {
     // APIV1:'/admin/api/v1',

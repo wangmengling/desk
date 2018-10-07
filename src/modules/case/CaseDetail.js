@@ -72,8 +72,8 @@ class CaseDetail extends Component {
                 console.log(element[0]["src"])
                 let image = {
                     src:API.api.imgUrl +  element[0]["src"],
-                    height:element[0]["width"],
-                    width:element[0]["height"]
+                    height:element[0]["height"],
+                    width:element[0]["width"]
                 }
                 imageArray.push(image)
             });

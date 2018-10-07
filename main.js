@@ -5,6 +5,7 @@ const app = electron.app
 // Module to create native browser window.
 const BrowserWindow = electron.BrowserWindow
 // const Menu = electron.Menu
+import config from  "./config"
 
 const path = require('path')
 const url = require('url')
@@ -41,7 +42,7 @@ function createWindow () {
   //   slashes: true
   // }))
   if (true) {
-    mainWindow.loadURL('http://localhost:4008/')
+      mainWindow.loadURL(config.server.host + config.server.port)
   }else {
     mainWindow.loadURL(url.format({
       pathname: path.join(__dirname, './public/index.html'), protocol: 'file:', slashes: true }))
@@ -49,7 +50,7 @@ function createWindow () {
   }
   
   // Open the DevTools.
-  mainWindow.webContents.openDevTools()
+  // mainWindow.webContents.openDevTools()
 
   // Emitted when the window is closed.
   mainWindow.on('closed', function () {

@@ -12,8 +12,6 @@
     "babel-register": "^6.26.0",
     "concurrently": "^3.5.1",
     "cross-env": "^5.1.6",
-    "electron": "^2.0.2",
-    "electron-tabs": "^0.9.1",
     "eslint": "^4.19.1",
     "eslint-config-standard": "^11.0.0",
     "eslint-config-standard-react": "^6.0.0",
@@ -66,7 +64,9 @@
     "chrome-tabs": "^1.0.0",
     "css-loader": "^0.28.11",
     "dragula": "^3.7.2",
-    "electron-packager": "^12.1.0",
+    "electron": "^2.0.2",
+    "electron-tabs": "^0.9.1",
+    "electron-packager": "^12.2.0",
     "electron-prebuilt": "^1.4.13",
     "electron-rebuild": "^1.8.1",
     "file-loader": "^1.1.11",
@@ -75,16 +75,16 @@
     "json-loader": "^0.5.7",
     "less": "^3.0.4",
     "less-loader": "^4.1.0",
-    "nodemon": "^1.17.5",
+    "nodemon": "^1.18.4",
     "postcss-import": "^11.1.0",
     "postcss-loader": "^2.1.5",
     "raw-loader": "^0.5.1",
     "react-transform-hmr": "^1.0.4",
     "style-loader": "^0.21.0",
     "uglifyjs-webpack-plugin": "^1.2.5",
-    "webpack": "^4.12.0",
+    "webpack": "^4.20.2",
     "webpack-cli": "^3.0.3",
-    "webpack-dev-server": "^3.1.4",
+    "webpack-dev-server": "^3.1.9",
     "webpack-node-externals": "^1.7.2",
     "webpack-target-electron-renderer": "^0.4.0"
   },
@@ -100,6 +100,7 @@
     "hot-servers": "cross-env NODE_ENV=development node -r babel-register scripts/dev.js",
     "hot-server": "./node_modules/.bin/nodemon  scripts/dev.js  --exec babel-node",
     "start-hot": "cross-env HOT=1 NODE_ENV=development ./node_modules/.bin/electron -r babel-register -r babel-polyfill ./main",
-    "dev": "concurrently --kill-others \"npm run hot-servers\" \"npm run start-hot\""
+    "dev": "concurrently --kill-others \"npm run hot-servers\" \"npm run start-hot\"",
+    "packager": "electron-packager . --platform=darwin --electron-version=2.0.2 --overwrite"
   }
 }
